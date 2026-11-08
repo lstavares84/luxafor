@@ -11,6 +11,7 @@ O controle é feito em Python puro via `/dev/hidraw`, sem dependências.
 | [PROTOCOLO.md](PROTOCOLO.md) | Especificação do protocolo, com cada item marcado como validado visualmente, medido ou em aberto |
 | [luxafor.py](luxafor.py) | CLI e biblioteca de controle, com limites de segurança |
 | [tools/anim.py](tools/anim.py) | Envia um comando cru e registra os eventos com timestamp |
+| [hardware/](hardware/README.md) | Placa própria (rev A): STM32C071 + 3 LEDs SK6805, KiCad 9, arquivos JLC |
 
 ## Uso rápido
 
