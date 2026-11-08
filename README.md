@@ -32,6 +32,19 @@ Permissão: o usuário precisa de leitura e escrita em `/dev/hidrawN`. Em deskto
 - 3 LEDs RGB (baixo, meio, topo) com PWM linear de 8 bits.
 - O dispositivo manda o evento `00 01` quando uma animação termina.
 
+## Especificações públicas vs. esta unidade
+
+| Item | Fabricante / varejo | Observado nesta unidade |
+|---|---|---|
+| Dimensões | 48 × 15 × 34 mm | não medido |
+| Peso | 8 g (sem cabo) | não medido |
+| LEDs | 6 RGB | 3 respondem (endereços 4–6 aceitos, nada acende) |
+| Conector / cabo | USB-C, cabo de 1,5 m | — |
+| Fixação | ímã com adesivo | — |
+| Material da bandeira | policarbonato ou alumínio (as fontes divergem) | não verificado |
+
+Fontes: [página do produto](https://luxafor.com/product/flag2/), [anúncio de varejo](https://www.desertcart.lk/products/541533457-flag-led-usb-busy-light-indicator-20-inch-usb-c), [análise no Gadget Explained](https://www.gadgetexplained.com/2017/02/luxafor-flag-office-busywork-usb-light.html). Materiais internos e encaixes não são documentados publicamente; só abrindo o case.
+
 ## ⚠️ Cuidados
 
 - `01 13 …` (LED `0x13`) **trava o firmware**. Reconecte o aparelho fisicamente e **não** use reset USB por software, que travou o barramento USB do host.
