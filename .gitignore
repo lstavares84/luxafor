@@ -8,3 +8,6 @@ fp-info-cache
 _autosave-*
 *.dsn
 *.ses
+
+# renders: versionar só os JPEGs
+docs/conceito/renders/*.png
