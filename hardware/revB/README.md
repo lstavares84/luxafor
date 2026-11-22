@@ -13,6 +13,26 @@ Base: rev A de github.com/lstavares84/luxafor (hardware/). Tudo é gerado por sc
 | SWD | Tag-Connect TC2030-IDC-NL na face de baixo (1 3V3, 2 SWDIO, 3 NRST, 4 SWCLK, 5 GND) |
 | BOOT0 | PA14 (= SWCLK) <- JP1 (jumper de solda NA, face de baixo) <- R4 1k <- 3V3 |
 
+## Imagens da placa
+
+Renders do KiCad. Os modelos 3D do MCU, do USB-C e dos LEDs são substitutos visuais parecidos.
+
+<img src="renders/render_top_bottom.png" width="400" alt="Frente e verso">
+
+*Frente e verso.*
+
+| Frente | Verso |
+|---|---|
+| <img src="renders/render_top.png" width="180" alt="Frente"> | <img src="renders/render_bottom.png" width="180" alt="Verso"> |
+
+<img src="renders/render_iso.png" width="400" alt="Isométrico">
+
+*Isométrico.*
+
+| Cobre de cima | Cobre de baixo |
+|---|---|
+| <img src="renders/copper_top.png" width="140" alt="Cobre de cima"> | <img src="renders/copper_bottom.png" width="140" alt="Cobre de baixo"> |
+
 ## Regenerar
 ```
 cd tools
