@@ -158,6 +158,37 @@ Estoques, links e datasheets de cada peça (e das alternativas avaliadas) estão
 5. BOOT0 (JP1) só vale depois de gravar `nBOOT_SEL = 0`; com a flash vazia o chip já entra em DFU sozinho.
 6. Modelos 3D de U1, J1 e dos LEDs nos renders são substitutos visuais.
 
+## Conceitos de produto
+
+Quatro formas para a mesma placa rev C (11 × 44 mm, 3× WS2816B-2020 em linha, STM32C071, USB-C). As imagens são renders conceituais gerados por IA, não fotos de um produto fabricado. O encaixe de cada uma está em [design/conceitos/README.md](design/conceitos/README.md).
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="design/conceitos/totem.jpg" alt="Totem: prisma de acrílico fosco sobre base de madeira" width="300"><br>
+      <strong>Totem</strong><br>
+      Prisma de acrílico fosco sobre base de madeira
+    </td>
+    <td align="center" width="50%">
+      <img src="design/conceitos/pendente.jpg" alt="Pendente: cilindro fosco pendurado pelo cabo USB-C" width="300"><br>
+      <strong>Pendente</strong><br>
+      Cilindro fosco pendurado pelo cabo USB-C
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="design/conceitos/bandeirola-dobravel.jpg" alt="Bandeirola dobrável: clipe de monitor e bandeira de acrílico" width="300"><br>
+      <strong>Bandeirola dobrável</strong><br>
+      Haste com clipe e bandeira de acrílico em dobradiça
+    </td>
+    <td align="center" width="50%">
+      <img src="design/conceitos/mini-letreiro.jpg" alt="Mini letreiro: acrílico fosco liso em base de alumínio preto" width="300"><br>
+      <strong>Mini letreiro</strong><br>
+      Acrílico fosco liso em base de alumínio preto
+    </td>
+  </tr>
+</table>
+
 ## Conteúdo
 
 | Arquivo | O que é |
@@ -167,6 +198,7 @@ Estoques, links e datasheets de cada peça (e das alternativas avaliadas) estão
 | [luxafor.py](luxafor.py) | CLI e biblioteca de controle, com limites de segurança |
 | [tools/anim.py](tools/anim.py) | Envia um comando cru e registra os eventos com timestamp |
 | [hardware/revC/](hardware/revC/README.md) | Placa atual (rev C): STM32C071G8U6 + 3× WS2816B-2020 de 16 bits, KiCad 9, arquivos JLC |
+| [design/conceitos/](design/conceitos/README.md) | Conceitos de produto (renders de IA): totem, pendente, bandeirola dobrável e mini letreiro |
 | [hardware/revB/](hardware/revB/README.md) | Revisão anterior (rev B): STM32C071G8U6 (QFN-28) + 3× SK6805-EC20 |
 | [hardware/](hardware/README.md) | Rev A: STM32C071F8P6 (TSSOP-20) + 3 LEDs SK6805, KiCad 9, arquivos JLC |
 
