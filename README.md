@@ -163,6 +163,7 @@ Estoques, links e datasheets de cada peça (e das alternativas avaliadas) estão
 | Arquivo | O que é |
 |---|---|
 | [PROTOCOLO.md](PROTOCOLO.md) | Especificação do protocolo, com cada item marcado como validado visualmente, medido ou em aberto |
+| [docs/FUNCIONAMENTO.md](docs/FUNCIONAMENTO.md) | Relatório completo: cor, PWM, fade, strobe, wave, padrões, lâmina 05 explicada e cronologia de todos os testes |
 | [luxafor.py](luxafor.py) | CLI e biblioteca de controle, com limites de segurança |
 | [tools/anim.py](tools/anim.py) | Envia um comando cru e registra os eventos com timestamp |
 | [hardware/revC/](hardware/revC/README.md) | Placa atual (rev C): STM32C071G8U6 + 3× WS2816B-2020 de 16 bits, KiCad 9, arquivos JLC |
