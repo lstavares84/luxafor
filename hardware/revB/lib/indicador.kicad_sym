@@ -1,0 +1,24 @@
+(kicad_symbol_lib
+	(version 20241209)
+	(generator "indicador")
+	(symbol "SK6805-EC20"
+		(pin_names (offset 0.254))
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "D" (at -5.08 8.89 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "SK6805-EC20" (at 1.27 -8.89 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "indicador:LED_SK6805-EC20_2.0x2.0mm" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C2890036.html" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Description" "LED RGB endereçável 2020, 5 mA/canal, VDD 3.5-5.5 V, VIH 0.6*VDD (datasheet Rev A1)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(symbol "SK6805-EC20_0_1"
+			(rectangle (start -7.62 7.62) (end 7.62 -7.62) (stroke (width 0.254) (type default)) (fill (type background)))
+		)
+		(symbol "SK6805-EC20_1_1"
+			(pin power_in line (at 0 10.16 270) (length 2.54) (name "VDD" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+			(pin output line (at 10.16 0 180) (length 2.54) (name "DOUT" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))
+			(pin power_in line (at 0 -10.16 90) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+			(pin input line (at -10.16 0 0) (length 2.54) (name "DIN" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+		)
+	)
+)

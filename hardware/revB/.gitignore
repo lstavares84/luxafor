@@ -1,0 +1,4 @@
+# KiCad: backups, lock e cache de footprints
+*-backups/
+*.lck
+fp-info-cache

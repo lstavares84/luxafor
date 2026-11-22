@@ -12,6 +12,18 @@ O controle é feito em Python puro via `/dev/hidraw`, sem dependências.
 | [luxafor.py](luxafor.py) | CLI e biblioteca de controle, com limites de segurança |
 | [tools/anim.py](tools/anim.py) | Envia um comando cru e registra os eventos com timestamp |
 | [hardware/](hardware/README.md) | Placa própria (rev A): STM32C071 + 3 LEDs SK6805, KiCad 9, arquivos JLC |
+| [hardware/revB/](hardware/revB/README.md) | Placa rev B: STM32C071G8U6 (QFN-28) + 3× SK6805-EC20, KiCad 9, arquivos JLC |
+
+## Hardware rev B
+
+A [rev B](hardware/revB/README.md) é uma placa de 11 × 44 mm, 2 camadas, ainda não fabricada nem testada. A [rev A](hardware/README.md) permanece no lugar.
+
+- MCU STM32C071G8U6 (QFN-28), com DFU por USB.
+- 3× SK6805-EC20 em 5 V, com buffer 74AHCT1G125.
+- USB-C com ESD (USBLC6-2SC6) e regulador AP2112K-3.3.
+- ERC e DRC conferidos com `kicad-cli`: ERC sem mensagens; DRC sem pads desconectados e sem erros de footprint. Há um aviso de footprint local no conector USB-C (`lib_footprint_mismatch`, override local).
+
+Em aberto: conferir as rotações do CPL na prévia da JLC, confirmar o remapeamento de PA11/PA12 no firmware, e a largura da placa, herdada da rev A.
 
 ## Uso rápido
 
