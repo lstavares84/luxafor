@@ -1,0 +1,13 @@
+** Drc report for luxflag.kicad_pcb **
+** Created on 2026-11-22T09:02:20-0300 **
+
+** Found 1 DRC violations **
+[lib_footprint_mismatch]: Footprint 'USB_C_Receptacle_HRO_TYPE-C-31-M-12' does not match copy in library 'Connector_USB'.
+    Local override; warning
+    @(105.5000 mm, 141.0000 mm): Footprint J1
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** End of Report **
