@@ -1,0 +1,13 @@
+firmware/build/
+firmware/third_party/
+firmware/tests/test_engine
+firmware/tests/test_nvm
+firmware/tests/test_ws
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+# segredos nunca no repositório
+*client_secret*.json
+token.txt
+state.json

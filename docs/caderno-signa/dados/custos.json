@@ -1,0 +1,33 @@
+{
+ "cambio": {"usd_brl": 5.8889, "origem": "PTAX venda BCB de 19/11/2026 (última publicada, consultada em 2026-11-22); rever antes de decidir"},
+ "lotes": [5, 100, 1000],
+ "pecas_placa": [
+  ["U1", "C44521811", 1], ["D1-D3", "C4154877", 3], ["J1", "C165948", 1], ["U2", "C51118", 1],
+  ["U3", "C7484", 1], ["U4", "C7519", 1], ["C1", "C19702", 1], ["C2", "C52923", 1],
+  ["C3-C8", "C1525", 6], ["R1,R2", "C25905", 2], ["R3", "C25105", 1], ["R4", "C11702", 1]
+ ],
+ "pecas_origem": "cotação: API de peças JLCPCB (selectSmtComponentList), faixa de preço por quantidade, 2026-11-22, US$",
+ "pcb_usd_lote": {"5": 4.0, "100": 15.0, "1000": 60.0,
+   "origem": "estimativa: tabela pública JLCPCB 2 camadas 0,8 mm; painel; não cotado no carrinho"},
+ "pcba_fixo_usd": {"5": 27.5, "100": 27.5, "1000": 58.0,
+   "origem": "estimativa: setup US$ 8 + estêncil US$ 1,50 + 6 peças 'extended' × US$ 3 (lotes 5 e 100); lote 1000 em PCBA padrão: setup US$ 25 + estêncil US$ 15 + US$ 18"},
+ "juntas_por_placa": 107, "usd_por_junta": 0.0017,
+ "juntas_origem": "estimativa: contagem de pads da BOM (QFN-28+EP 29, LEDs 18, USB-C 20, SOT 16, passivos 24) × tarifa pública JLC",
+ "mecanica_usd_un": {"5": 17.5, "100": 9.7, "1000": 2.11,
+   "origem": "estimativa: lote 5 = tampa CNC US$ 12 + SLA US$ 3 + tubo US$ 1,50 + passa-cabo impresso US$ 1; lotes 100/1000 = BOM do Pendente (P01–P05), sem cotação"},
+ "molde_usd": {"5": 0, "100": 0, "1000": 4000,
+   "origem": "estimativa: molde família P03+P04 em alumínio US$ 2.500–4.000 + molde P05 US$ 800–1.500 (faixas de ferramentaria China); adotado US$ 4.000"},
+ "cabo_usd_un": {"5": 3.0, "100": 1.8, "1000": 1.0, "origem": "estimativa: cabo C↔C 1,5 m OEM; pedir amostra"},
+ "frete_usd_lote": {"5": 30, "100": 60, "1000": 300,
+   "origem": "estimativa: courier China→Brasil (PCBA + mecânica), ~0,03 kg/un + caixas"},
+ "importacao": {
+   "5":    {"regime": "RTS (remessa expressa)", "ii": 0.60, "icms_por_dentro": 0.20, "despachante_brl": 0},
+   "100":  {"regime": "RTS (remessa expressa)", "ii": 0.60, "icms_por_dentro": 0.20, "despachante_brl": 0},
+   "1000": {"regime": "importação formal", "ii": 0.16, "ipi": 0.15, "pis": 0.021, "cofins": 0.0965, "icms_por_dentro": 0.18, "despachante_brl": 2500},
+   "origem": "estimativa: RTS = II 60 % + ICMS ~20 % por dentro (fator ×2,0 sobre valor aduaneiro); formal = alíquotas típicas a confirmar por NCM com despachante; molde entra no valor aduaneiro (assist, Acordo de Valoração Aduaneira art. 8)"
+ },
+ "embalagem_brl_un": {"5": 12.0, "100": 6.0, "1000": 3.2, "origem": "estimativa: caixa kraft + cartão + etiquetas, gráfica BR"},
+ "montagem_min_un": {"5": 20, "100": 8, "1000": 5},
+ "hora_brl": 40.0,
+ "montagem_origem": "estimativa: técnico R$ 3.500/mês + encargos ≈ R$ 7.000 / 176 h ≈ R$ 40/h; tempo inclui gravação do firmware por DFU, teste e embalagem"
+}

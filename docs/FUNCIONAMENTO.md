@@ -6,7 +6,7 @@ Este documento explica:
 - como o aparelho fala com o computador;
 - como ele produz cor, brilho e transições;
 - como cada animação se comporta no tempo;
-- o que a lâmina 05 do caderno conceitual ("Em funcionamento") representa, e como reproduzir cada estado dela no Luxafor de hoje e no indicador próprio;
+- o que a lâmina 05 do caderno conceitual original (agora em [`.old/docs/conceito/`](../.old/docs/conceito/)) representa, e como reproduzir cada estado dela no Luxafor; o caderno atual do SIGNA está em [`docs/caderno-signa/`](caderno-signa/signa-conceito.pdf);
 - todos os testes feitos, em ordem, com o que foi enviado, o que voltou e o que se viu.
 
 A especificação curta do protocolo está em [`PROTOCOLO.md`](../PROTOCOLO.md), e a biblioteca está em [`luxafor.py`](../luxafor.py).
@@ -37,7 +37,7 @@ A especificação curta do protocolo está em [`PROTOCOLO.md`](../PROTOCOLO.md),
 10. [Padrões embutidos](#10-padrões-embutidos)
 11. [Repetição infinita e interrupção](#11-repetição-infinita-e-interrupção)
 12. [O relógio interno do firmware](#12-o-relógio-interno-do-firmware)
-13. [Comandos desconhecidos e varreduras](#13-comandos-desconhecidos-e-varreduras)
+13. [Varreduras, opcodes inexistentes e serial](#13-varreduras-opcodes-inexistentes-e-serial)
 14. [Incidentes](#14-incidentes)
 15. [Lâmina 05 explicada em detalhe](#15-lâmina-05-explicada-em-detalhe)
 16. [Cronologia completa dos testes](#16-cronologia-completa-dos-testes)
@@ -156,7 +156,12 @@ Esse detalhe explica um resultado curioso das primeiras varreduras: "comandos" `
 | `03` | Strobe | `03 LED R G B tempo 00 rep` | `42`, depois `00 01` |
 | `04` | Wave | `04 tipo R G B 00 rep vel` | `42` (e `00 01` só no tipo 5) |
 | `06` | Padrão | `06 id rep 00 00 00 00 00` | `42`, depois `00 01` (exceto o padrão 2) |
-| `80` | Versão | `80 00 …` | `80 3c` |
+| `80` | Versão | `80 00 …` | `80 3c` (bytes seguintes: cópia do serial no boot) |
+| `51` | Gravar serial (6 bytes) na NVM | `51 b1 b2 b3 b4 b5 b6` | ecoa os argumentos |
+| `52` | Gravar os 4 primeiros bytes do serial na NVM | `52 b1 b2 b3 b4` | ecoa os argumentos |
+| `62` | Ler o serial atual | `62 …` | `62 b1 b2 b3 b4` |
+
+Os opcodes `05` e `07`–`0F` não existem (sem resposta). Ver [seção 13](#13-varreduras-opcodes-inexistentes-e-serial).
 
 **Do aparelho para o computador (8 bytes):**
 
@@ -164,8 +169,9 @@ Esse detalhe explica um resultado curioso das primeiras varreduras: "comandos" `
 |---|---|
 | `42 00 00 00 00 00 00 00` | ACK: comando de LED aceito |
 | `00 01 00 00 00 00 00 00` | Evento assíncrono: a animação terminou |
-| `80 3c 00 …` | Resposta de versão |
-| `51 xx` / `52 xx` / `62 xx` | Respostas dos comandos desconhecidos (seção 13) |
+| `80 3c …` | Resposta de versão; os bytes seguintes parecem a cópia do serial carregada no boot |
+| `51 …` / `52 …` | Eco da gravação do serial (seção 13) |
+| `62 b1 b2 b3 b4 …` | Leitura do serial atual (seção 13) |
 
 ### 3.3 Endereço do LED (byte 1)
 
@@ -498,7 +504,7 @@ Isso sugere que o firmware tem um único temporizador de cerca de 4 kHz e que as
 
 ---
 
-## 13. Comandos desconhecidos e varreduras
+## 13. Varreduras, opcodes inexistentes e serial
 
 ### 13.1 Varredura do primeiro byte, `00` a `0F` [M]
 
@@ -515,24 +521,25 @@ Cada código foi enviado com o mesmo argumento (`ff 10 00 00 05 00 01`):
 | `06` | `42` | padrão |
 | `07`–`0F` | nada | inexistentes |
 
+Uma nota anterior de que `05` e `07`–`0F` responderiam ACK `42` estava **errada** (provável confusão com o `00` engolido pelo `hidraw`). Esses opcodes não existem: o aparelho não responde.
+
 ### 13.2 Varredura `00 xx` (xx de 00 a FF) [M]
 
 Responderam só: `01`, `02`, `03`, `04`, `06` (comandos de LED), `51`, `52`, `62` e `80`. Pela seção 3.1, essa varredura equivale a enviar cada `xx` sozinho. **Não existe um conjunto escondido de "subcomandos de 00".**
 
-### 13.3 Os comandos `51`, `52` e `62` [M][?]
+### 13.3 Os comandos `51`, `52` e `62` [M]
 
-| Envio | Resposta |
-|---|---|
-| `51 00` / `51 01` / `51 02` / `51 ff` | `51 00` / `51 01` / `51 02` / `51 ff`: ecoa o argumento |
-| `52 00` / `52 01` / `52 02` / `52 ff` | ecoa o argumento |
-| `62 00` | `62 00` |
-| `62 01` / `62 02` / `62 ff` | `62 ff`: qualquer valor não zero vira `ff` |
-| `80 00` / `80 01` / `80 02` | `80 3c`: o argumento é ignorado |
-| `81` | nada |
+A varredura inicial só viu o eco dos argumentos. Testes posteriores, com leitura do serial e reconexão física, identificaram a função:
 
-**Hipóteses [H]:** `51` e `52` podem ser leitura/escrita de um registro de configuração; `62` parece um sinalizador booleano.
+| Comando | Função | Formato | Resposta |
+|---|---|---|---|
+| `51` | Grava os 6 bytes do serial na NVM | `51 b1 b2 b3 b4 b5 b6` | ecoa os argumentos |
+| `52` | Grava os 4 primeiros bytes do serial na NVM | `52 b1 b2 b3 b4` | ecoa os argumentos |
+| `62` | Lê o serial atual (não grava) | `62 …` | `62 b1 b2 b3 b4` (os 4 primeiros, como medido) |
+| `80` | Versão do firmware | `80 …` | `80 3c` (o argumento é ignorado). Os bytes seguintes do relatório de 8 bytes parecem carregar a **cópia do serial no boot**; uma gravação só aparece aí e no descritor USB depois de reconectar. Não substitui o `62`. |
+| `81` | — | `81` | nada (inexistente) |
 
-Depois do reinício do PC, os três responderam `00` ao valor 0. Não se sabe se eles gravam em memória permanente. Um dos suspeitos da troca do número de série (seção 14.2) são exatamente esses comandos. **Desde então, eles só devem ser testados com cuidado e um de cada vez.**
+**Cuidado:** `51` e `52` escrevem na memória não volátil. Foi provavelmente uma dessas escritas (com zeros) que zerou o serial desta unidade (seção 14.2). Não use esses comandos em um aparelho cujo serial você queira preservar, a menos que seja de propósito.
 
 ---
 
@@ -554,7 +561,7 @@ Depois do reinício do PC, os três responderam `00` ao valor 0. Não se sabe se
 
 Antes, `iSerial` era `000000002498`; depois do reinício, passou a `000000000000` em qualquer porta [M]. O valor fica gravado no aparelho: trocar de porta muda só o número do dispositivo no barramento (027 → 028 → 002), nunca o serial.
 
-Os suspeitos são as escritas em `51`, `52` e `62` ou a corrupção causada pelo `0x13`, e não foi possível separar um do outro. O funcionamento dos LEDs não foi afetado [V].
+Os testes posteriores mostraram que `51` e `52` **gravam o serial na NVM** e que `62` só lê. A troca permanente é consistente com uma escrita de zeros via `51` ou `52`. Na época não foi possível separar isso da corrupção causada pelo `0x13`. O funcionamento dos LEDs não foi afetado [V].
 
 ---
 
@@ -562,7 +569,7 @@ Os suspeitos são as escritas em `51`, `52` e `62` ou a corrupção causada pelo
 
 ### 15.1 O que a lâmina mostra (e o que não mostra)
 
-A lâmina 05 do caderno conceitual ("Em funcionamento") **é a especificação de comportamento do indicador próprio**, não uma gravação do Luxafor. Ela define:
+A lâmina 05 do caderno conceitual original ("Em funcionamento"), hoje em [`.old/docs/conceito/`](../.old/docs/conceito/), **era a especificação de comportamento do indicador próprio**, não uma gravação do Luxafor. O caderno atual do SIGNA (sala + IA, cores e ritmos atualizados) está em [`docs/caderno-signa/signa-conceito.pdf`](caderno-signa/signa-conceito.pdf). Esta seção permanece como registro de como reproduzir **aqueles** estados no Flag. Ela define:
 - cinco estados;
 - uma cor para cada um;
 - uma **forma de onda de brilho no tempo** para cada um, desenhada em 4 segundos;
@@ -794,13 +801,14 @@ Na ordem em que foram feitos em 2026-11-08. "RX" é a resposta do aparelho.
 
 ## 17. O que ainda não sabemos e como descobrir
 
+Os comandos `51`, `52` e `62` **já foram identificados** (seção 13.3): `51` grava 6 bytes do serial na NVM, `52` grava os 4 primeiros, `62` lê o atual. Não repetir esses testes em um aparelho cujo serial você queira preservar.
+
 | Pergunta | Como descobrir | Risco |
 |---|---|---|
 | Frequência do PWM | Câmera de celular em câmera lenta (240 fps) filmando o LED em brilho 32: o número de faixas por quadro dá a frequência. Melhor ainda: fotodiodo ou LED usado como sensor na entrada de microfone e um analisador de espectro (Audacity) | nenhum |
 | Fração acesa do strobe | Mesmo fotodiodo, medindo o tempo ligado e desligado | nenhum |
 | Curva do pulso da wave 5 | Mesmo fotodiodo, gravando um ciclo com `vel` alto | nenhum |
 | Comprimento de onda dos chips | Espectrômetro (há modelos de celular com rede de difração) | nenhum |
-| O que fazem `51`, `52` e `62` | Um valor por vez, lendo o serial e a versão antes e depois e reconectando fisicamente entre os testes | **médio**: podem gravar em memória permanente |
 | Endereços `14`–`FE` e padrões 0/9+ | Um por vez, com reconexão física se travar, **nunca** reset por software | **médio**: podem travar o firmware |
 | Qual PIC e se há proteção de leitura | Abrir o case, ler a marcação do chip, procurar os pads de ICSP | baixo (mecânico) |
 | A hipótese do relógio único (seção 12) | Ler o firmware via ICSP, se não estiver protegido | baixo |

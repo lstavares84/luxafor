@@ -1,0 +1,34 @@
+{
+ "titulo": "BALANÇO DE ENERGIA · PIOR CASO (BRANCO 100 %)",
+ "tensao_V": 5.0,
+ "itens": [
+  {
+   "nome": "LEDs WS2816B ×3, R+G+B 100 %",
+   "mA": 60,
+   "origem": "datasheet WS2816B-2020: Iout típ. 20 mA (R+G+B) por LED × 3"
+  },
+  {
+   "nome": "LEDs, quiescente ×3",
+   "mA": 3,
+   "origem": "datasheet: IDD < 0,8 mA por LED × 3, arredondado"
+  },
+  {
+   "nome": "MCU STM32C071 48 MHz + USB",
+   "mA": 12,
+   "origem": "estimativa a partir do DS14693 (run 48 MHz + USB FS)"
+  },
+  {
+   "nome": "LDO + buffer + ESD",
+   "mA": 1,
+   "origem": "datasheets: AP2112K Iq 55 µA; SN74AHCT1G125 ICC ≤ 10 µA"
+  },
+  {
+   "nome": "margem de projeto 30 %",
+   "mA": 23,
+   "origem": "estimativa: 30 % sobre 76 mA"
+  }
+ ],
+ "limite_mA": 500,
+ "limite_nome": "USB 2.0 padrão (500 mA)",
+ "nota": "valores de datasheet, não medidos"
+}

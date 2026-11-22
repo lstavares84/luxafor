@@ -1,5 +1,7 @@
 __pycache__/
 *.pyc
+*.egg-info/
+
 # KiCad
 *-backups/
 *.kicad_prl
@@ -9,5 +11,21 @@ _autosave-*
 *.dsn
 *.ses
 
-# renders: versionar só os JPEGs
+# Tooling and intermediates not versioned
+*.jar
+hardware/**/renders/raw_render_*
+
+# Software (também coberto por software/.gitignore)
+software/.venv/
+software/firmware/build/
+software/firmware/third_party/
+software/firmware/tests/test_engine
+software/firmware/tests/test_nvm
+software/firmware/tests/test_ws
+*client_secret*.json
+token.txt
+state.json
+
+# Caderno antigo (agora em .old): versionar só os JPEGs das cenas
 docs/conceito/renders/*.png
+.old/docs/conceito/renders/*.png

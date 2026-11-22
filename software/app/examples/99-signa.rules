@@ -1,0 +1,7 @@
+# Linux: acesso ao SIGNA/Luxafor sem root. Copie para /etc/udev/rules.d/ e rode:
+#   sudo udevadm control --reload && sudo udevadm trigger
+# TODO(Lucas): trocar 1209:0001 pelo VID:PID definitivo.
+KERNEL=="hidraw*", ATTRS{idVendor}=="1209", ATTRS{idProduct}=="0001", MODE="0660", TAG+="uaccess"
+KERNEL=="hidraw*", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="f372", MODE="0660", TAG+="uaccess"
+# DFU da ROM do STM32 (gravação por USB com dfu-util)
+SUBSYSTEM=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="df11", MODE="0660", TAG+="uaccess"

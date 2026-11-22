@@ -1,0 +1,388 @@
+                                                                                  WS2816C-2121
+                                          16Bit 3 Channel Constant current digital LED
+                                  breakpoint continuous transmission LED light source
+General description
+Worldsemi New generation digital led is specially designed for high resolution display application,each
+channel with 16bit gray scale,4bit gamma correction inside ,can achieve 20bit display effect.With 10KHZ
+Port refresh frequency,RGB color balance 3:6:1,pretty suitable for large display screen image.
+High-tech integrated digital led,no need any external components including capacitor
+With high stability dual-signal function,more simple and convenient to design, performance more stable.
+The data transfer protocol use single NZR communication mode. After the pixel power-on reset, the DIN
+port receive data from controller, the first pixel collect initial 48bit data then sent to the internal data latch,
+the other data which reshaping by the internal signal reshaping amplification circuit sent to the next
+cascade pixel through the DO port. After transmission for each pixel, the signal to reduce 48bit. pixel
+adopt auto reshaping transmit technology, making the pixel cascade number is not limited the signal
+transmission, only depend on the speed of signal transmission.
+
+Features and Benefits
+   The control integrated circuit and the LED share the only power source.
+   Control circuit and RGB chip are integrated in a package of 2121 components, to form a complete
+    addressable pixel.
+   Built-in signal reshaping circuit, after wave reshaping to the next driver, ensure wave-form distortion
+    not accumulate.
+   Built-in electric reset circuit and power lost reset circuit.
+   OUT R / G / B output gray level: R,G,B 65536 gray scale(Built-in 4Bit GAMMA correction)
+   RGB Port with 10KHz refresh frequency
+   Cascading port transmission signal by single line.
+   2.1mm*2.1mm*1mm(L*W*H),Super tiny size
+   Use standard display 3:6:1 brightness ratio color match.
+   White light color temperature:6000K±500
+
+
+Applications
+
+   LED transparent screen, LED pixel screen, LED special-shaped screen, various electronic products.
+
+
+
+
+                                                       1 / 10
+http://www.world-semi.com
+                                                                            WS2816C-2121
+                                        16Bit 3 Channel Constant current digital LED
+                                  breakpoint continuous transmission LED light source
+Mechanical Dimensions（Unit:mm）
+
+
+
+
+PIN Configuration
+
+
+
+
+                                                            Recommended pad size(Unit：mm)
+
+PIN Function
+
+      NO.      Symbol    PIN                         Function description
+        1        BI     BACKUP DATA INPUT      Backup data signal input PIN
+        2        DI            DATA IN         Control data signal input PIN
+        3       VDD       POWER SUPPLY         Power supply PIN
+        4       DO          DATA OUT           Control data signal output
+        5       BO      BACKUP DATA OUT        Secondary data out PIN
+        6       GND         GROUND             Ground, data & power grounding
+
+
+
+
+                                            2 / 10
+http://www.world-semi.com
+                                                                                               WS2816C-2121
+                                                           16Bit 3 Channel Constant current digital LED
+                                                     breakpoint continuous transmission LED light source
+Absolute Maximum Ratings（TA=25℃,VSS=0V）
+                 Parameter                    Symbol                         Ratings                        Unit
+            Power supply voltage                   VDD                      +3.7~+5.5                            V
+            Logical Input Voltage                  VI                     -0.3V～VDD+0.7                          V
+             Quiescent Current                     IDD                         <0.8                          mA
+             Operation junction
+                                                 Topt                        -25～+85                         ℃
+               temperature
+        Storage temperature range                  Tstg                      -40~+105                        ℃
+
+
+Electrical Characteristics（TA=25℃，VDD=5V,VSS=0V）
+
+        Parameter                    Symbol         Min         Tpy          Max        Unit         Conditions
+ Port output current                  Iout           10         10.5         11.5       mA     OUTR+OUTG+OUTB
+
+ Input Current                         II           ——          ——            ±1        µA     VI=VDD/VSS
+ High-level input voltage             VIH          0.7VDD       ——           ——          V
+ Low-level input voltage              VIL           ——          ——          0.3 VDD      V
+ Hysteresis voltage                    VH           ——          0.35         ——          V
+ Dynamic current                                                                               OUTR,OUTG,OUTB =OFF
+                                     IDDdyn         ——          0.7           1         mA
+ consumption                                                                                   DO=open circuit
+
+ Power consumption                    PD            ——          ——           250        mW     Ta=25℃
+ Signal output sink current           Iodo          ——          ——            45        mA
+
+
+
+
+Switching Characteristics（TA=25℃, VDD=5V, VSS=0V, unless otherwise specified）
+
+                                            Min.         Typ.   Max.          Unit                Test Condition
+    Parameter             Symbol
+                                                                                                 (Working current)
+Transmission delay
+                              tPLZ          ——           ——      300              ns     CL=15pF, DIN→DOUT, RL=10KΩ
+time
+Fall time                     tTHZ          ——           ——      120              µs     CL=300pF, OUTR/OUTG/OUTB
+Input capacity                CI            ——           ——      15               pF                     ——
+
+
+
+
+                                                                 3 / 10
+http://www.world-semi.com
+                                                                                WS2816C-2121
+                                                 16Bit 3 Channel Constant current digital LED
+                                           breakpoint continuous transmission LED light source
+
+
+LED Characteristics
+
+
+
+                                                                Test Condition：VDD=5V
+       Parameter           Symbol        Color
+                                                        Min.        Typ.          Max.    Unit
+
+
+
+                                           Red            80        125            150
+    Luminous intensity        IV          Green          200        270            350    mcd
+                                          Blue            30         40            60
+                                           Red           620                       625
+       Wavelength             λd          Green          522                       527    nm
+                                          Blue           470                       475
+                               X          CCT:                      0.32
+     Color Coordinate          Y        6000K±500                   0.33
+
+     Luminous Angle                                        -        120               -   Deg
+
+
+
+Data Transfer Time
+
+        T0H              0 code, high voltage time                         200ns~320ns
+        T1H              1 code, high voltage time                         520ns~800ns
+        T0L               0 code, low voltage time                         800ns~1.2µs
+        T1L               1 code, low voltage time                          480ns-1µs
+
+        RES             Frame unit, low voltage time                         >280µs
+
+   Data Cycle：T0H+TOL≥1.25µs; T1H+T1L≥1.25µs
+
+
+
+
+                                                       4 / 10
+http://www.world-semi.com
+                                                                                  WS2816C-2121
+                                               16Bit 3 Channel Constant current digital LED
+                                         breakpoint continuous transmission LED light source
+Timing waveform diagram
+
+
+Sequence Chart
+                                                          Cascade Method：
+
+                                                          D1               D2            D3            D4
+                                                                DIN DO          DIN DO        DIN DO
+
+                                                                    PIX1        PIX2           PIX3
+
+
+Data Transmission Method
+
+
+
+
+Note: The data of D1 is send by MCU, and D2, D3, D4 through pixel internal reshaping amplification to
+transmit.
+
+Composition of 48bit Data
+D0      D1       D2       D3      D4       D5       D6         D7      D8        D9       D10      D11
+G15     G14      G13      G12     G11      G10      G9         G8      G7        G6       G5       G4
+D12     D13      D14      D15     D16      D17      D18        D19     D20       D21      D22      D23
+G3      G2       G1       G0      R15      R14      R13        R12     R11       R10      R9       R8
+D24     D25      D26      D27     D28      D29      D30        D31     D32       D33      D34      D35
+R7      R6       R5       R4      R3       R2       R1         R0      B15       B14      B13      B12
+D36     D37      D38      D39     D40      D41      D42        D43     D44       D45      D46      D47
+B11     B10      B9       B8      B7       B6       B5         B4      B3        B2       B1       B0
+Note: Data transmit in order of GRB, high bit data at first.
+
+
+
+
+                                                     5 / 10
+http://www.world-semi.com
+                                                                    WS2816C-2121
+                                         16Bit 3 Channel Constant current digital LED
+                                   breakpoint continuous transmission LED light source
+
+Typical Application Circuit:
+
+
+
+
+No need any external components;
+
+
+
+Signal wiring diagram: The first LED BI is connected to GND
+
+
+
+
+Packaging method and quantity： 4000PCS /Bag
+
+
+
+
+                               Moisture-proof bag       Desiccant         External label
+  Internal label
+
+
+
+
+                                               6 / 10
+http://www.world-semi.com
+                                                                             WS2816C-2121
+                                              16Bit 3 Channel Constant current digital LED
+                                        breakpoint continuous transmission LED light source
+Carrier specification and LED braid position
+
+
+
+
+Reel Packing Specifications (Unit: mm)
+
+
+
+
+TOP SMD LED Using Instructions
+1.   Summary
+
+To make the best use of WORLDSEMI’s LED, please refer to the below precautions, they are of same
+usage method as other electronic components.
+
+2.   Cautions
+
+2.1. Dust & Cleaning
+
+The surface of the LED is encapsulated with modified epoxy resin because it plays a very good role in
+protecting the optical performance and aging resistance. The modified epoxy resin is easy to stick with
+
+                                                   7 / 10
+http://www.world-semi.com
+                                                                              WS2816C-2121
+                                              16Bit 3 Channel Constant current digital LED
+                                        breakpoint continuous transmission LED light source
+dust and must be kept clean. When there’s a certain amount of dust on the surface of the LED, it won’t
+affect brightness, but dust proof should be taken care of. Promoting the use of unsealed package in
+preference to others and the assembled LEDs should be placed in a clean container.
+
+Avoid using the organic solvents to clean the dust on the LED surface and it’s necessary to confirm
+whether the cleaning fluid will dissolve the LED.
+
+Do not clean the LEDs by the ultrasonic. Some parameters affecting the LED performance must be
+evaluated if have no alternative but to the ultrasonic cleaning method, such as ultrasonic power, baking
+time and assembly conditions, etc.
+
+2.2. Moisture-proof packaging
+
+TOP SMD LEDs are moisture sensitive components. LEDs are packaged in aluminum foil bag to prevent
+the from absorbing moisture during transport and storage. A desiccant is placed in the bags to absorb
+moisture. If the LED absorbs moisture, then it evaporates and expands when in reflow process, which
+may break the colloid from the bracket and damage the optical performance of LED. For this reason,
+moisture-proof packaging is to prevent the from absorbing moisture during transport and storage. The
+moisture resistance rating of WORLDSEMI’s LED is: LEVEL 5a.
+
+Tabel I - IPC/JEDEC J-STD-020 Moisture/Reflow Sensitivity Classification
+
+
+           MSL Level                                              Workshop Life
+                                         Time                              Conditions
+           LEVEL1                        Unlimited                         ≤30℃/85%RH
+           LEVEL2                        1 Year                            ≤30℃/60%RH
+           LEVEL2a                       4 Weeks                           ≤30℃/60%RH
+           LEVEL3                        168 Hours                         ≤30℃/60%RH
+           LEVEL4                        72 Hours                          ≤30℃160%RH
+           LEVEL5                        48 Hours                          ≤30℃/60%RH
+           LEVEL5a                       24 Hours                          ≤30℃/60%RH
+           LEVEL6                        Take-out and Use immediately      ≤30℃/60%RH
+
+
+
+2.3. SMT patch description
+
+     1. Please use it under the condition of T<30°C and RH<60%;
+
+     2. The product opening period to the reflow soldering completion time period is controlled within
+     24H;
+
+     3. If time-out occurs, it is necessary to dehumidify and bake the LED.
+
+2.4 Demand for dehumidification:75℃/>24H
+
+
+
+                                                     8 / 10
+http://www.world-semi.com
+                                                                                                                         WS2816C-2121
+                                                                        16Bit 3 Channel Constant current digital LED
+                                                                  breakpoint continuous transmission LED light source
+3.SMT Reflow
+
+Refer to the parameters listed below, the experimental results prove that the TOP SMD LED meets the
+JEDEC J-STD-020C standards. As a general guideline, it is recommended to follow the SMT reflow
+temperature curve recommended by the solder paste manufacturer.
+
+                Curve Description                            Lead-free
+     The lowest preheat temperature (Tsmin)                      Reflow
+                                                                 150℃
+     The highest preheat temperature (Tsmax)                      200℃
+     Preheating time (Tsmin to Tsmax) (ts)                       60-180 S
+     Average rate of temperature rise (Tsmax to Tp)              <3℃/S
+     LIQUID REGION temperature (TL)                               217℃
+     LIQUID REGION Holding Time (tL)                             60-150 S
+     Peak Temperature (Tp)                                        240℃
+     High Temperature Region(Tp=-5℃) Holding                      <10 S
+     Time (tp)Rate
+     Cooling                                                     <6℃/S
+     Room Temperature to Peak Holding Time                       <6 min
+
+
+Remarks:
+
+1. These general guidelines may not apply to all PCB designs and reflow soldering configurations.
+
+2. All temperatures referred are measured on the surface of the package body.
+
+
+
+3.     Assembly Precautions
+
+
+
+        1. Clip the LED from its             2. Neither directly touch the gel            3. Not to be double stacked, it may   4. Can not be stored in or applied
+        side.                                surface with the hand or sharp               damage its internal circuit.          in the acidic sites of PH<7.
+                                             instrument, it may damage its
+                                             internal circuit.
+
+
+
+
+                                                                                 9 / 10
+http://www.world-semi.com
+                                                                         WS2816C-2121
+                                            16Bit 3 Channel Constant current digital LED
+                                      breakpoint continuous transmission LED light source
+
+
+
+Modify Record
+Version №       Status    Modify Content Summary            Date          Reviser       Approved
+                 Bar
+   V1.0           N       New-Official release             20200106     Shen JinGuo    Yin HuaPing
+   V1.1           M       Delete PCB layout                20200519     Shen JinGuo    Yin HuaPing
+                          description
+
+
+
+Remarks:
+1. Version number plus "0.1" if for add & modify parameters, eg. V1.0 → V1.1
+2. Major revision or many parameters modified, version number plus “1.0”, eg. V1.0 → V2.0
+3. No version number is attached to Part Number
+Initial version: V1.0, Status bar: N--New, A--Add, M--Modify, D--Delete.
+
+
+
+
+                                                 10 / 10
+http://www.world-semi.com
+

@@ -1,0 +1,13 @@
+{
+  "description": "SIGNA: copiar para ~/.codex/hooks.json e aprovar em /hooks (Codex só roda hooks revisados). Docs: https://learn.chatgpt.com/docs/hooks",
+  "hooks": {
+    "UserPromptSubmit": [{ "hooks": [{ "type": "command", "command": "signa-cli hook codex", "timeout": 5 }] }],
+    "PreToolUse":       [{ "hooks": [{ "type": "command", "command": "signa-cli hook codex", "timeout": 5 }] }],
+    "PostToolUse":      [{ "hooks": [{ "type": "command", "command": "signa-cli hook codex", "timeout": 5 }] }],
+    "PermissionRequest":[{ "hooks": [{ "type": "command", "command": "signa-cli hook codex", "timeout": 5 }] }],
+    "PostModelRequest": [{ "hooks": [{ "type": "command", "command": "signa-cli hook codex", "timeout": 5, "async": true }] }],
+    "Stop":             [{ "hooks": [{ "type": "command", "command": "signa-cli hook codex", "timeout": 5 }] }],
+    "Interrupt":        [{ "hooks": [{ "type": "command", "command": "signa-cli hook codex", "timeout": 2 }] }],
+    "SessionEnd":       [{ "hooks": [{ "type": "command", "command": "signa-cli hook codex", "timeout": 3 }] }]
+  }
+}

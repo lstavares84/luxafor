@@ -1,0 +1,199 @@
+{
+ "data": "2026-11-22",
+ "hora": "14:49",
+ "fonte": "JLCPCB parts API selectSmtComponentList (stockCount, componentPrices USD)",
+ "pecas": {
+  "C110293": {
+   "modelo": "SKRTLAE010",
+   "marca": "ALPSALPINE",
+   "estoque": 69662,
+   "biblioteca": "expand",
+   "precos": [
+    [
+     1,
+     0.1437
+    ],
+    [
+     50,
+     0.1162
+    ],
+    [
+     150,
+     0.1025
+    ],
+    [
+     500,
+     0.0922
+    ],
+    [
+     3000,
+     0.0779
+    ],
+    [
+     6000,
+     0.0738
+    ]
+   ]
+  },
+  "C11702": {
+   "modelo": "0402WGF1001TCE",
+   "marca": "UNI-ROYAL(Uniroyal Elec)",
+   "estoque": 29436761,
+   "biblioteca": "base",
+   "precos": [
+    [
+     1,
+     0.0011
+    ],
+    [
+     1000,
+     0.0009
+    ],
+    [
+     3000,
+     0.0008
+    ],
+    [
+     10000,
+     0.0007
+    ],
+    [
+     50000,
+     0.0006
+    ],
+    [
+     50200,
+     0.0006
+    ]
+   ]
+  },
+  "C44521811": {
+   "modelo": "STM32C071G8U6",
+   "marca": "STMicroelectronics",
+   "estoque": 109,
+   "biblioteca": "expand",
+   "precos": [
+    [
+     1,
+     2.8075
+    ],
+    [
+     10,
+     2.3642
+    ],
+    [
+     30,
+     2.086
+    ],
+    [
+     100,
+     1.7997
+    ],
+    [
+     490,
+     1.6721
+    ],
+    [
+     980,
+     1.6165
+    ]
+   ]
+  },
+  "C42113261": {
+   "modelo": "STM32C071GBU6",
+   "marca": "STMicroelectronics",
+   "estoque": 0,
+   "biblioteca": "expand",
+   "precos": [
+    [
+     1,
+     5.1831
+    ],
+    [
+     10,
+     4.4354
+    ],
+    [
+     30,
+     3.9921
+    ],
+    [
+     100,
+     3.5421
+    ],
+    [
+     490,
+     3.336
+    ],
+    [
+     980,
+     3.2427
+    ]
+   ]
+  },
+  "C42240018": {
+   "modelo": "STM32C071GBU6N",
+   "marca": "STMicroelectronics",
+   "estoque": 0,
+   "biblioteca": "expand",
+   "precos": [
+    [
+     1,
+     3.2787
+    ],
+    [
+     10,
+     2.7781
+    ],
+    [
+     30,
+     2.482
+    ],
+    [
+     100,
+     2.1809
+    ],
+    [
+     490,
+     2.0419
+    ],
+    [
+     980,
+     1.9797
+    ]
+   ]
+  },
+  "C43650207": {
+   "modelo": "STM32C071G8U6N",
+   "marca": "STMicroelectronics",
+   "estoque": 0,
+   "biblioteca": "expand",
+   "precos": [
+    [
+     1,
+     1.9895
+    ],
+    [
+     10,
+     1.9895
+    ],
+    [
+     30,
+     1.9895
+    ],
+    [
+     200,
+     0.7952
+    ],
+    [
+     500,
+     0.7674
+    ],
+    [
+     1000,
+     0.7543
+    ]
+   ]
+  }
+ }
+}

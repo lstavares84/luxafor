@@ -1,0 +1,13 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [{ "hooks": [{ "type": "command", "command": "signa-cli ai --source claude-code --state processando" }] }],
+    "PostToolUse":      [{ "hooks": [{ "type": "command", "command": "signa-cli ai --source claude-code --state processando" }] }],
+    "PermissionRequest":[{ "hooks": [{ "type": "command", "command": "signa-cli ai --source claude-code --state atencao" }] }],
+    "Notification":     [{ "matcher": "permission_prompt", "hooks": [{ "type": "command", "command": "signa-cli ai --source claude-code --state atencao" }] }],
+    "Stop":             [{ "hooks": [{ "type": "command", "command": "signa-cli ai --source claude-code --state desocupada" }] }],
+    "StopFailure": [
+      { "matcher": "rate_limit", "hooks": [{ "type": "command", "command": "signa-cli ai --source claude-code --state limite" }] },
+      { "matcher": "authentication_failed|billing_error|server_error|invalid_request|model_not_found|unknown", "hooks": [{ "type": "command", "command": "signa-cli ai --source claude-code --state erro" }] }
+    ]
+  }
+}
