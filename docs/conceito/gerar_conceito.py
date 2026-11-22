@@ -23,7 +23,7 @@ FONTS = ("/home/lstavares84/.claude/plugins/cache/anthropic-agent-skills/"
 MMPT = 72 / 25.4
 PW, PH = 420.0, 297.0
 M = 16.0                                   # margem externa
-TOTAL = 11                                 # lâminas no caderno
+TOTAL = 14                                 # lâminas no caderno
 
 for name, f in [("Jura", "Jura-Light.ttf"), ("JuraM", "Jura-Medium.ttf"),
                 ("Mono", "GeistMono-Regular.ttf"), ("Serif", "InstrumentSerif-Italic.ttf"),
@@ -1003,8 +1003,9 @@ def main():
     c.setTitle("Indicador rev A · caderno conceitual")
     c.setAuthor("lstavares84")
     from paginas_extra import EXTRA_PAGES
+    from paginas_negocio import BUSINESS_PAGES
     for fn in (page_cover, page_views, lambda c: page_board(c, pcb), page_bom, page_states, page_system,
-               *EXTRA_PAGES):
+               *EXTRA_PAGES, *BUSINESS_PAGES):
         fn(c)
         c.showPage()
     c.save()
