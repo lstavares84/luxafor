@@ -31,7 +31,7 @@ A tabela completa, com curvas e alocação dos LEDs, está em [`software/data/pr
 
 | Caminho | O que é |
 |---|---|
-| [`hardware/revD/`](hardware/revD/) | Placa atual: KiCad 9, gerbers, BOM, renders, `CHANGELOG.md` |
+| [`hardware/revD/`](hardware/revD/) | Placa atual: KiCad 9, gerbers, BOM, renders, [`CHANGELOG.md`](hardware/revD/CHANGELOG.md) |
 | [`mecanica/`](mecanica/) | Corpo plástico, berço, tampa, botão, cabo e o conjunto integrado |
 | [`software/`](software/) | Firmware (STM32C071 + TinyUSB) e app de desktop (calendário, hooks, extensão) |
 | [`docs/caderno-signa/`](docs/caderno-signa/) | Caderno conceitual SIGNA (14 lâminas A3) e os scripts que o geram |

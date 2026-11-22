@@ -15,10 +15,10 @@ Apresentação completa, galeria e tabela de estados: ver o [README do repositó
 | USB | HRO TYPE-C-31-M-12 (C165948), CC1/CC2 5,1 kΩ, USBLC6-2SC6 (C7519) |
 | SWD / BOOT0 | Tag-Connect TC2030-IDC-NL na face de baixo; JP1 (jumper de solda NA) + R4 1 kΩ puxam PA14/BOOT0 a 3V3 |
 | Verificação | ERC 0. DRC 0 erros, 0 pendências, paridade OK; 1 aviso (silk do USB-C editado de propósito) |
-| Roteamento | Freerouting 2.1.0 (DSN/SES, `-mt 1`, MP=80), 342 trilhas, 24 vias, + `fix_vias.py` + remoção de trechos duplicados e pontas soltas |
+| Roteamento | Freerouting 2.1.0 (DSN/SES, `-mt 1`, MP=80), 342 trilhas, 24 vias, + [`fix_vias.py`](tools/fix_vias.py) + remoção de trechos duplicados e pontas soltas |
 
 ## Ligação dos LEDs (datasheet WS2816B-2020, "Typical Application Circuit")
-`U3.Y → R3 33 Ω → D1.DI`; `D1.BI = GND`; `Dn.DO → Dn+1.DI`; `Dn.BO → Dn+1.BI`; `D3.DO/BO` livres.
+`U3.Y → R3 33 Ω → D1.DI`; `D1.BI = GND`; `Dn.DO → Dn+1.DI`; `Dn.BO → Dn+1.BI`; `D3.DO` e `D3.BO` livres.
 Firmware: 48 bits por LED (G16 R16 B16, MSB primeiro), T0H 200–320 ns, T1H 520–800 ns, reset > 280 µs.
 
 ## Regenerar

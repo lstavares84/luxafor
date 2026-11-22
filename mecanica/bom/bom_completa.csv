@@ -1,0 +1,35 @@
+categoria,item,descricao,ref_desenho,fornecedor,part_number,qtd_por_unidade,custo_usd_por_produto_lote100,custo_usd_por_produto_lote1000,fonte,status
+Eletrônica,U1,MCU STM32C071G8U6 (QFN-28),LXE-E01,LCSC/JLCPCB,STM32C071G8U6 (C44521811),1,1.8,1.617,"API JLCPCB 2026-11-22, faixa de qtd; estoque JLC 109",verificado (preço/estoque do dia)
+Eletrônica,D1-D3,LED RGB WS2816B-2020,LXE-E01,LCSC/JLCPCB,WS2816B-2020 (C4154877),3,0.222,0.172,"API JLCPCB 2026-11-22, faixa de qtd; estoque JLC 2818",verificado (preço/estoque do dia)
+Eletrônica,J1,USB-C HRO TYPE-C-31-M-12,LXE-E01,LCSC/JLCPCB,TYPE-C-31-M-12 (C165948),1,0.148,0.104,"API JLCPCB 2026-11-22, faixa de qtd; estoque JLC 479061",verificado (preço/estoque do dia)
+Eletrônica,U2,LDO AP2112K-3.3TRG1,LXE-E01,LCSC/JLCPCB,AP2112K-3.3TRG1 (C51118),1,0.129,0.094,"API JLCPCB 2026-11-22, faixa de qtd; estoque JLC 18947",verificado (preço/estoque do dia)
+Eletrônica,U3,Buffer TI SN74AHCT1G125DBVR,LXE-E01,LCSC/JLCPCB,SN74AHCT1G125DBVR (C7484),1,0.089,0.071,"API JLCPCB 2026-11-22, faixa de qtd; estoque JLC 37435",verificado (preço/estoque do dia)
+Eletrônica,U4,ESD ST USBLC6-2SC6,LXE-E01,LCSC/JLCPCB,USBLC6-2SC6 (C7519),1,0.118,0.084,"API JLCPCB 2026-11-22, faixa de qtd; estoque JLC 40264",verificado (preço/estoque do dia)
+Eletrônica,C1,Cap. 10 uF 0603 X5R,LXE-E01,LCSC/JLCPCB,CL10A106KP8NNNC (C19702),1,0.017,0.012,"API JLCPCB 2026-11-22, faixa de qtd; estoque JLC 9889395",verificado (preço/estoque do dia)
+Eletrônica,C2,Cap. 1 uF 0402 X5R,LXE-E01,LCSC/JLCPCB,CL05A105KA5NQNC (C52923),1,0.005,0.004,"API JLCPCB 2026-11-22, faixa de qtd; estoque JLC 9143328",verificado (preço/estoque do dia)
+Eletrônica,C3-C8,Cap. 100 nF 0402 X7R,LXE-E01,LCSC/JLCPCB,CL05B104KO5NNNC (C1525),6,0.015,0.009,"API JLCPCB 2026-11-22, faixa de qtd; estoque JLC 33255992",verificado (preço/estoque do dia)
+Eletrônica,"R1,R2","Res. 5,1 k 0402",LXE-E01,LCSC/JLCPCB,0402WGF5101TCE (C25905),2,0.003,0.002,"API JLCPCB 2026-11-22, faixa de qtd; estoque JLC 3991027",verificado (preço/estoque do dia)
+Eletrônica,R3,Res. 33 R 0402,LXE-E01,LCSC/JLCPCB,0402WGF330JTCE (C25105),1,0.001,0.001,"API JLCPCB 2026-11-22, faixa de qtd; estoque JLC 4451532",verificado (preço/estoque do dia)
+Eletrônica,"R4,R5",Res. 1 k 0402 (pull-up BOOT0 + série do botão),LXE-E01,LCSC/JLCPCB,0402WGF1001TCE (C11702),2,0.002,0.002,"API JLCPCB 2026-11-22, faixa de qtd; estoque JLC 29436761",verificado (preço/estoque do dia)
+Eletrônica,S1,"Chave tátil lateral ALPS SKRTLAE010 (1,6 N)",LXE-E01,LCSC/JLCPCB,SKRTLAE010 (C110293),1,0.116,0.092,"API JLCPCB 2026-11-22, faixa de qtd; estoque JLC 69662",verificado (preço/estoque do dia)
+Eletrônica,PCB,"PCB 2 camadas 11×44×0,8 mm (15,2 nas orelhas), ENIG, painelizada",LXE-E01,JLCPCB,gerber.zip (luxpcb-revD/fab),1,0.2,0.06,estimativa a partir da tabela pública JLC (não cotado neste pacote),ESTIMATIVA
+Eletrônica,PCBA,"Montagem SMT 1 face (setup + estêncil + 7 peças ""extended"" × US$3 + juntas)",LXE-E01,JLCPCB,—,1,0.505,0.15,"estimativa: taxas públicas JLC (setup ~US$8, extended US$3/peça, ~US$0,0017/junta)",ESTIMATIVA
+Eletrônica,FW,Gravação de firmware via USB DFU (ROM) + teste,teste.md,interno,—,1,0.1,0.05,estimativa de tempo de operador,ESTIMATIVA
+Mecânica,P01,"Tubo difusor PC opalino Ø16/13 × 48, cortado e jateado",LXP-P01,fornecedor de tubos PC difusor (China) / serralheria plástica (BR),não definido,1,0.9,0.3,estimativa: tubo extrudado ~US$2–5/m + corte/jateamento,ESTIMATIVA — cotar
+Mecânica,P02,"Tampa Al 6061-T6 torneada, anodizada preta",LXP-P02,JLCCNC / PCBWay CNC (protótipo); torno CNC tipo suíço (série),não definido,1,5.5,1.6,estimativa: torneamento simples Ø19×32 + anodização,ESTIMATIVA — cotar
+Mecânica,P02b,Tampa impressa (só protótipo; não soma no custo de série),LXP-P02,JLC3DP (MJF PA12 preto / SLA preto),—,0,1.5,0.0,estimativa,ESTIMATIVA (opcional)
+Mecânica,P03,Berço PC branco,LXP-P03,100 un.: SLA/MJF (JLC3DP); 1000 un.: injeção (molde família P03+P04),não definido,1,1.8,0.1,estimativa: impressão 3D vs. peça injetada (sem ferramental),ESTIMATIVA — cotar
+Mecânica,P04,Tampão PC opalino,LXP-P04,idem P03,não definido,1,0.9,0.06,estimativa,ESTIMATIVA — cotar
+Mecânica,P06,"Botão (pino) PC opalino Ø3/Ø4,4 × 7,4",LXP-P06,100 un.: SLA translúcido (JLC3DP); 1000 un.: cavidade extra no molde família P03+P04,não definido,1,0.4,0.02,estimativa (peça minúscula; custo dominado pelo ferramental),ESTIMATIVA — cotar
+Mecânica,P05,Passa-cabo TPE 60A bipartido,LXP-P05,100 un.: silicone fundido em molde impresso / TPU 3D; 1000 un.: injeção TPE,não definido,1,0.6,0.05,estimativa,ESTIMATIVA — cotar
+Mecânica,FERR,Ferramental amortizado (molde família P03+P04+P06 em alumínio ~US$3.300 + molde P05 ~US$1.000),manufatura.md,ferramentaria (China/BR),—,1,0.0,4.3,estimativa de mercado (rev B: +~US$300 pela cavidade do P06 e pelo furo/rebaixo no P04); ver manufatura.md; só entra no lote de 1000,ESTIMATIVA
+Cabo,C01,"Cabo USB-C ↔ USB-C 1,5 m, USB 2.0, capa Ø3,5–4,0; casca ≥5,8 mm, sobremolde ≤11,6×6,4, sobremolde+bota ≤24,5 mm, bota ≤Ø6,4",LXP-A00 item 7,fabricante de cabos OEM (Shenzhen) / distribuidor BR,não definido,1,1.8,1.0,estimativa de mercado,ESTIMATIVA — exigir amostra e medir plugue
+Cabo,C02,"Adaptador USB-A macho → USB-C fêmea (opcional, p/ PCs sem USB-C)",—,idem,não definido,1,0.45,0.25,estimativa,ESTIMATIVA (decisão Lucas)
+Embalagem,K01,Caixa kraft/cartão 60×40×130 mm com berço de papelão,—,gráfica BR / fornecedor China,não definido,1,1.0,0.35,estimativa,ESTIMATIVA
+Embalagem,K02,Cartão de instruções A7 + QR para software,—,gráfica,—,1,0.1,0.03,estimativa,ESTIMATIVA
+Embalagem,K03,Saco/manga de proteção para o tubo,—,genérico,—,1,0.05,0.02,estimativa,ESTIMATIVA
+Etiquetas,L01,Etiqueta de série/lote (dentro da caixa) + etiqueta da caixa,—,genérico,—,2,0.06,0.02,estimativa,ESTIMATIVA
+Etiquetas,L02,Gravação a laser no topo da tampa (logo/nº série),LXP-P02 nota 6,fornecedor CNC,—,1,0.3,0.1,estimativa,ESTIMATIVA (opcional)
+Fixação/adesivos,F01,Nenhum parafuso nem cola no projeto (encaixes + press-fit),—,—,—,0,0,0,decisão de projeto,n/a
+Fixação/adesivos,F02,"Cola UV (gota) de contingência no pino do berço, se o press-fit soltar",—,ex.: adesivo UV para PC (a escolher),não definido,0,0.02,0.01,estimativa; não somado,opcional
+Montagem,M01,Montagem final (≈4 min) + teste funcional (≈1 min) + embalagem,montagem.md / teste.md,interno,—,1,1.2,0.6,estimativa (mão de obra BR),ESTIMATIVA
