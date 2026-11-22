@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Confere peças na LCSC (página do produto) e na JLC (API de busca) e grava docs/parts-check.json."""
-import json, re, subprocess, datetime, sys
+import json, os, re, subprocess, datetime, sys
 sys.path.insert(0, "/tmp")
 UA = "Mozilla/5.0"
 def sh(*a): return subprocess.check_output(a).decode("utf-8", "replace")
@@ -58,6 +58,9 @@ out["distributors_web_search_snapshot"] = {
   "note": "Mouser/DigiKey bloqueiam acesso direto do box (403/desafio). Números abaixo vêm de resultados de busca, não de página aberta; tratar como não verificados.",
   "STM32C071G8U6": {"mouser": "2.781 em estoque (busca)", "digikey": "42 imediatos (busca)"},
 }
-json.dump(out, open("docs/parts-check.json", "w"), indent=2, ensure_ascii=False)
+OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "docs", "parts-check.json")
+os.makedirs(os.path.dirname(OUT), exist_ok=True)
+with open(OUT, "w", encoding="utf-8") as fh:
+    json.dump(out, fh, indent=2, ensure_ascii=False)
 for x in out["chosen"]: print(x["ref"], x["lcsc"], x["model"], x["brand"], "LCSC", x["lcsc_stock"], "JLC", x["jlc_stock"], x["jlc_library"])
 for x in out["evaluated"]: print("  cand", x["lcsc"], x["model"], x["lcsc_stock"], x["jlc_stock"])
