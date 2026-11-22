@@ -1,0 +1,783 @@
+      广东欧思科科技股份有限公司
+                                                                                          文件编号:SK6805-EC20-001   Rev. No.: A1
+
+
+
+
+                                    产品规格书
+       SAP料号 SAP part No. :                                   10205E6805A20003A0
+
+       产品型号 Product P/N :                                       SK6805-EC20-001
+
+       样 品 号 SAP part No. :                                        EP000008-001
+
+       客户料号              Client P/N :                                      NA
+
+       版 本 号 Version No.：                                                  A1
+
+       时         间 Sending Date :                                     2025-08-25
+
+
+
+            Customer approval                                              Opsco approval
+  CHECK            APPROVE                 CONFIRM             DRAW              CHECK               APPROVE
+
+                                                              雷梁晨                 张国保                  朱更生
+
+                       Stamp                                                       Stamp
+
+
+
+
+                        ELECTROSTATIC
+                       SENSITIVE DEVICES
+
+
+   *使用我司产品前，请检索我司官网核对规格书版本，产品规格书版本更新，恕不能及时相告，请以官网最新资料为准。
+   *Before using our products, please search our official website to verify the version of the specification sheet.
+   The product specification sheet version is updated, and we apologize for any inconvenience caused. Please
+   refer to the latest information on the official website for accuracy.
+   *该版权及产品最终解释权归广东欧思科科技股份有限公司所有，如有特殊规格要求，请联系我司工程人员。
+   *The copyright and final interpretation rights of the product belong to GuangDong OPSCO Technology Co.,
+   Ltd. If there are special specification requirements, please contact our engineering personnel.
+
+
+
+
+电话:   (769)82632725     传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                                   1 / 13
+        广东欧思科科技股份有限公司
+                                                                                                        文件编号:SK6805-EC20-001     Rev. No.: A1
+
+
+
+
+                                                   目 录 Catalogue
+      1、产品概述 Overview ......................................................................................3
+
+      2、主要应用 Main applications ..........................................................................3
+
+      3、产品命名一般说明 General instructions for product naming .........................3
+
+      4、机械尺寸 Mechanical dimensions ..................................................................4
+
+      5、引脚功能说明 Pin Function Description ........................................................4
+
+      6、PCB建议焊盘尺寸 PCB recommended pad size ...........................................5
+
+      7、IC极限参数 IC limit parameter ....................................................................5
+
+      8、 GRB LED光电参数 GRB LED Optoelectronic parameters ..........................6
+
+      9、IC电气参数 IC electrical parameters ............................................................6
+
+      10、控制器建议数据传输时间 Controller Suggested Data Transmission
+      Time ..................................................................................................................7
+
+      11、数据传输方式 Data transmission method ....................................................7
+
+      12 、时序波形图 Time series waveform diagram ................................................8
+
+      13、24bit数据结构 24 bit data structure ............................................................9
+
+      14、典型应用电路 Typical application circuit .....................................................9
+
+      15、光电特性 Photoelectric characteristic ..........................................................10
+
+      16、包装标准 Packaging standards ....................................................................11
+
+      17、可靠性测试 Reliability testing .....................................................................12
+
+
+
+
+电话:     (769)82632725        传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                                                   2 / 13
+       广东欧思科科技股份有限公司
+                                                                                                      文件编号:SK6805-EC20-001   Rev. No.: A1
+
+
+
+   1.产品概述 Product overview:
+   ● 工作电压：5V@5mA (OUT GRB) ；
+      Forward voltage: 5V@5mA (OUT GRB) ；
+   ● 发光角度：160°；
+      Luminescent angle: 160 ° ；
+   ● 胶体颜色：半透明；
+      Lens color: translucent ；
+   ● 内置复位电路，上电不亮灯；
+      Built-in reset circuit, power does not light ；
+   ● 灰度调节：256级；
+      Grayscale adjustment：256 levels ；
+   ● 单线归零码传输协议，可无限级联；
+      Single-line zero code transmission protocol, can be infinite cascade；
+   ● 数据传输频率可达800Kbps， 当刷新速率30帧/秒时，级联数不小于1024点；
+     The data transmission frequency can reach 800Kbps, and when the refresh rate is 30 frames per second, the number of
+   cascades is not less than 1024 points ；
+   ● 湿敏等级：4 ；
+      MSL：4 ；
+   ● 静电ESD：2KV；
+      ESD level: 2KV；
+   ●符合RoHS REACH；
+      RoHS and REACH-compliant；
+
+
+
+
+   2.主要应用 Main applications:
+   ● 消费电子产品
+    Consumer electronics
+
+
+
+
+   3. 产品命名一般说明 General instructions for product naming：
+                                                       SK 6805-EC20-001
+                                                       ①    ②        ③          ④
+
+               ①                               ②                                    ③                       ④
+              系列                      IC系列与电流代码                                 封装外形                      内部编码
+              Series               IC series and current codes                Package outline           Internal code
+
+       默认为GRB晶片与                6805：指68系列IC，5mA电流
+                                                                   2.0x2.0x0.65毫米 PCB支架封装
+          IC集成在一起               版本                                                                    001：内部编码
+                                                                   2.0x2.0x0.65mm PCB holder
+       Default to GRBchip       Refers to the 68 series IC,5mA                                        Internal code
+                                                                   package
+        integrated with IC      current version
+
+
+
+
+电话:    (769)82632725         传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                                               3 / 13
+       广东欧思科科技股份有限公司
+                                                                                                      文件编号:SK6805-EC20-001   Rev. No.: A1
+
+
+
+
+4.机械尺寸 Mechanical dimensions:
+
+
+                       Top view                                           Bottom view
+                                 2                                        0.65        0.6
+
+          1.GND                                   4.DOUT            4                                         1
+
+
+
+
+                                                                                                           0.65
+                                        B
+
+                        IC
+
+
+
+
+                                                                                                           0.6
+      2
+
+
+
+
+                                                                          缺口（mark点）
+
+                                        R
+
+                                        G
+           2.DIN                                  3.VDD               3                                       2
+
+                       Side view
+          0.65
+
+
+
+
+                                                                             备注 Notes:
+                                                                              1. 以上标示单位为毫米.
+                                                                             The above markings are in millimeters
+                      DIN                   VDD                               2. 除非另外注明，尺寸公差为 ±0.1毫米.
+                                                                             Unless otherwise specified, the
+                                                                             dimensional tolerance is ± 0.1 millimeters
+
+
+
+  5. 引脚功能说明 Pin Function Description：
+
+           序号                     符号                        管脚名                                  功能描述
+      Serial Number              Symbol                    Pin name                         Function Description
+
+                                                              地                                   电源接地
+            1                     GND
+                                                            Grounds                            Power grounding
+
+
+                                                           数据输入                               控制数据信号输入
+            2                     DIN
+                                                           Data input                       Control data signal input
+
+
+                                                             电源                                   供电管脚
+            3                     VDD
+                                                          Power supply                         Power supply pins
+
+
+                                                          数据输出                            控制数据信号输出
+            4                    DOUT
+                                                          Data output                   Control data signal output
+
+
+
+
+电话:    (769)82632725        传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                                               4 / 13
+      广东欧思科科技股份有限公司
+                                                                                   文件编号:SK6805-EC20-001   Rev. No.: A1
+
+
+
+  6.PCB建议焊盘尺寸 PCB recommended pad size：(以实际使用情况为准 Based on actual usage)
+
+
+
+
+                                           Top view
+                                           0.8           0.5
+
+
+
+
+                  1.GND                                                          4.DOUT
+
+
+
+
+                                                                           0.7
+                                                                           0.5
+                  2.DIN                                                          3.VDD
+
+
+
+
+  7.IC极限参数 IC limit parameter ：（Ta=25℃）
+                    参数                            符号            范围                         单位
+                  Parameter                      Symbol         Range                      Unit
+
+               逻辑电源电压
+                                                  VDD          +3.5～+5.5                     V
+               Working voltage
+
+                 工作温度
+                                                  Topt          -40~+80                     ℃
+            Operation temperature
+
+                   储存温度
+                                                  Tstg          -40~+80                     ℃
+              Storage temperature
+
+           ESD耐压（人体模式）
+                                                  VESD            2K                         V
+      ESD withstand voltage (human mode)
+
+
+
+
+电话:   (769)82632725      传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                            5 / 13
+      广东欧思科科技股份有限公司
+                                                                                              文件编号:SK6805-EC20-001   Rev. No.: A1
+
+
+
+  8. GRBLED 光电参数 Optoelectronic parameters：
+
+                                                                        SK6805-EC20-001 5mA
+                         颜色
+                        Colour
+                                                           波长（nm)                         亮度（mcd)
+                                                         Wavelength (nm)                Brightness (mcd)
+
+                   绿色（GREEN)                                 520-530                          120-240
+
+
+                     红色（RED)                                 615-625                           50-100
+
+
+                    蓝色（BLUE)                                 465-475                            25-50
+
+  注：亮度误差±10%，波长误差±1.0nm
+  Note:Luminous Intensity: ±10%Iv, Dominant Wavelength: ±1.0nm
+
+
+
+
+  9. IC电气参数 IC electrical parameters：（TA=25℃）
+            参数                     符号         最小               典型            最大        单位             测试条件
+          Parameter               Symbol    Minimum           Typical      Maximum     Unit         Test conditions
+           工作电压
+                                   VDD           3.5            5.0           5.5        V                  ---
+       Chip input voltage
+
+                                   VIH          0.6VDD          ---           ---        V
+       信号输入翻转阀值
+                                                                                                        +VDD=5.0V
+    Signal input flip threshold
+                                   VIL            ---           ---         0.3VDD       V
+
+      B/G/R输出驱动电流
+       B/G/R output drive          IDOUT          ---            5            ---       mA              VDD、VDS=5V
+            current
+
+          PWM频率
+                                   FPWM           ---           1.0           ---       KHz                 ---
+        PWM frequency
+
+            静态功耗
+                                    IDD           ---           0.5           ---       mA                  ---
+    Static power consumption
+
+         数据传输速率
+                                   FDIN           ---           800           ---      Kbps                 ---
+         Transfer rate
+
+
+
+
+电话:   (769)82632725         传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                                       6 / 13
+      广东欧思科科技股份有限公司
+                                                                                                                                                                                                  文件编号:SK6805-EC20-001                            Rev. No.: A1
+
+
+
+
+  10. 控制器建议数据传输时间 Controller Suggested Data Transmission Time：
+                                      时序表名称                                                                                                     实际值                                                                            单位
+                                                                                                                    Min.                                                                Max.
+                                     Timeline Name                                                                                            Actual value                                                                     Unit
+                                                     码元周期
+                  T                                                                                                     0.90                            1.20                               20                                     us
+                                                   Symbol period
+                                            0码， 高电平时间
+              T0H                                                                                                       0.20                            0.30                             0.40                                     us
+                                          0 code, high-level time
+                                            0码， 低电平时间
+              T0L                                                                                                       0.70                            0.90                                --                                    us
+                                           0 code, low-level time
+                                            1码， 高电平时间
+              T1H                                                                                                       0.70                            0.90                                --                                    us
+                                          1 code, high-level time
+                                            1码， 低电平时间
+              T1L                                                                                                       0.20                            0.30                                --                                    us
+                                           1 code, low-level time
+
+                                        Reset码，低电平时间
+             Reset                                                                                                      200                                --                               --                                    us
+                                       Reset code, low-level time
+
+
+      注1：协议采用的是单极性归零码，每一个码元都必须有低电平。本协议的每个码元起始为高电平，高
+      电平时间宽度决定“0”码或者“1”码。
+      注 2:上述为第一颗芯片 DI 输入的数据通信协议时间要求。需按照上表的规定的码元时间范围来进行控制程序的
+      设计，重点注意0码高电平不得高于 0.4us，1码高电平不得低于 0.7us。
+      Note 1: The protocol uses unipolar return-to-zero codes, and each code element must have a low level. Each code element of this
+      protocol starts at a high level, high
+      The level time width determines whether it is "0" code or "1" code.
+      Note 2: The above is the time requirement for the data communication protocol of the first chip DI input. The control program
+      needs to be carried out in accordance with the code element time range specified in the above table
+      In the design, it is important to note that the 0-bit high level must not exceed 0.4us and the 1-bit high level must not be lower
+      than 0.7us.
+
+
+
+
+ 11.数据传输方式 Data transmission method：（Ta=25℃）
+                                                                                                                         R eset co de                                                                                           R eset co de
+                                                                                                                         =>200us
+                                       D a ta r e f r e s h c y c le ta b le 1                                                                                         D a ta r e f r e s h c y c le ta b le 2
+
+      T h e f ir s t g r o u p o f      T h e seco nd grou p o f                 T h e th ir d g r o u p o f 2 4 b it                   T h e f ir s t g r o u p o f     T h e seco nd grou p o f                T h e th ir d g r o u p o f 2 4 b it
+ D1   2 4 b it d a ta                   2 4 b it d a ta                          d a ta                                                 2 4 b it d a ta                  2 4 b it d a ta                         d a ta
+
+
+
+                                        T h e seco nd grou p o f                 T h e th ir d g r o u p o f 2 4 b it                                                    T h e seco nd grou p o f                T h e th ir d g r o u p o f 2 4 b it
+ D2                                     2 4 b it d a ta                          d a ta                                                                                  2 4 b it d a ta                         d a ta
+
+
+                                                                                 T h e th ir d g r o u p o f 2 4 b it                                                                                            T h e th ir d g r o u p o f 2 4 b it
+ D3                                                                              d a ta                                                                                                                          d a ta
+
+
+ D4
+
+
+
+
+      注Note： 其中D1为MCU端发送的数据，D2、D3、D4为级联电路自动整形转发的数据。
+      Among them, D1 is the data sent by the MCU end, and D2, D3, and D4 are the data automatically shaped and forwarded by
+      the cascaded circuit.
+
+
+
+
+电话:   (769)82632725                            传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                                                                                                                                                                    7 / 13
+      广东欧思科科技股份有限公司
+                                                                          文件编号:SK6805-EC20-001   Rev. No.: A1
+
+
+
+ 12.时序波形图 Time series waveform diagram：（Ta=25℃）
+
+
+      输入码型 Input code type：
+
+
+
+
+                      Symbol period               T
+
+                        0 code                        T0L
+                                           T0H
+                        1 code                          T1L
+                                            T1H
+                                                            Trst
+                       Reset code
+
+
+
+
+      连接方式 Connection method：
+
+
+
+
+                      D1              D2                    D3            D4
+                           DIN DO            DIN DO              DIN DO
+
+                             PIX1                PIX2              PIX3
+
+
+
+
+电话:   (769)82632725    传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                   8 / 13
+       广东欧思科科技股份有限公司
+                                                                                                            文件编号:SK6805-EC20-001     Rev. No.: A1
+
+
+
+   13. 24bit数据结构 24 bit data structure：（Ta=25℃）
+
+        G7        G6         G5         G4         G3         G2         G1         G0         R7           R6       R5         R4
+         R3        R2         R1        R0         B7         B6         B5         B4         B3           B2       B1         B0
+       注Note：高位先发，按照GRB的顺序发送数据(G7 → G6 →……..B0)
+       High bit first send, send data in GRB order (G7 → G6 →.... B0)
+
+
+
+
+   14. 典型应用电路 Typical application circuit：
+
+
+
+   GND
+                      GND                DOUT                  GND               DOUT                  GND                DOUT                R2
+
+Data             R1 DIN                  VDD                   DIN               VDD                   DIN                VDD
+
+       5V
+                                                     C1                                      C1                                          C1
+
+
+
+
+ 在实际应用电路中，为防止产品在测试时带电插拔产生的瞬间高压损伤IC内部信号输入输出引脚，应在信号输入及输出
+ 端串接保护电阻。此外，为了使各IC芯片间更稳定工作，各灯珠间的退偶电容则必不可少；
+
+ 1.应用一：用于软灯条或硬灯条的，灯珠间传输距离短的，建议在信号输入输出端各串接保护电阻，即R1=R2约500欧；
+ 以实际使用情况定；
+
+ 2.应用二：用于模组或一般异形产品，灯珠间传输距离长，因线材及传输距离不同，在信号两端串接的保护电阻会略有不
+ 同；以实际使用情况定；
+
+ In practical application circuits, to prevent instantaneous high voltage damage to the internal signal input and output pins of the IC
+ caused by live plugging and unplugging during testing, protective resistors should be connected in series at the signal input and
+ output terminals. In addition, in order to ensure more stable operation between IC chips, the decoupling capacitance between each
+ LED is essential;Based on actual usage;
+
+ 1. Application 1: For soft or hard light strips with short transmission distance between lamp beads, it is recommended to connect
+ protective resistors in series at the signal input and output terminals, that is, R1=R2, about 500 ohms;
+
+ 2. Application 2: Used for modules or For general shaped products, the transmission distance between lamp beads is long. Due to
+ different wire materials and transmission distances, the protective resistance connected in series at both ends of the signal will be
+ slightly different; Based on actual usage;
+
+
+
+电话:    (769)82632725        传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                                                      9 / 13
+      广东欧思科科技股份有限公司
+                                                                                                                                           文件编号:SK6805-EC20-001    Rev. No.: A1
+
+
+
+
+ 15. 光电特性 Photoelectric characteristic：
+                                                                  焊盘温度与光通量输出的相对关系
+                                                                  The relative relationship between pad
+                                                                  temperature and luminous flux output
+                                                           120%
+
+
+
+
+                                  Relative luminous flux
+                                                           100%
+
+                                                           80%                                                                         GREEN/BLUE
+
+                                                           60%
+                                                                                                                               RED
+                           相对光通量
+
+
+
+                                                           40%
+
+                                                           20%
+
+                                                           0.00
+                                                                  0           20           40          60         80      100        120
+
+                                                                                            焊盘温度
+                                                                                            Pad temperature
+
+                                                                                    波长特性
+                                                                                    Wavelength characteristics
+                                                           100%
+                                                                      BLUE                  GREEN
+                                                            80%                                                        RED
+                              Relative spectral
+                              distribution map
+                        相对光谱分布图
+
+
+
+
+                                                            60%
+
+
+                                                            40%
+
+                                                            20%
+
+
+                                                            0.00
+                                                                400      450         500        550        600   650    700     750 800
+                                                                                       波长Wavelength (nm)
+
+
+
+
+                                                                       典型的辐射方向图 160°
+                                                                       Typical radiation pattern 160 °
+                                                                                                                              30°
+
+
+                                                                                                                                       60°
+
+
+                                                                                                                                           90°
+                                                                  90     75        60 45        30    15     0   0.2 0.4 0.6 0.8 1.0
+                                                                                           辐射角度
+                                                                                           Radiation angle
+
+电话:   (769)82632725   传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                                                                                    10 / 13
+      广东欧思科科技股份有限公司
+                                                                                                                      文件编号:SK6805-EC20-001    Rev. No.: A1
+
+
+
+16. 包装标准 Packaging standards：
+
+
+                                                  SK6805-EC20-001
+                                                                    包装标示Packaging labeling
+
+
+                                                                                                4        3   1.GND
+                                                                                                             2.DIN
+                                                                                   3
+                                                                                                             3.VDD
+
+
+
+
+                                                                                                    IC
+                                                                                                1        2   4.DOUT
+
+
+                                                                                       载带Tape
+
+                                                      载带进料方向                 盖带Cover tape
+                                                      Carrier feeding direction
+
+
+
+
+                        卷盘 Reel(165/330x8mm)
+                                                                                            IC LED
+                                                                                                                       RoHS 2.0
+                                                                                                                       REACH
+                       (每卷最多装4500/15000个灯珠)                                                                            HF
+                       (Each roll can hold up to                                  PC:10205E6805A20003A0
+                       4500/15000 lamp beads)                                     PN:SK6805-EC20-001
+                       防静电的聚乙烯袋                                                   QTY:4500/15000 PCS
+                       Anti static polyethylene bag
+                       防潮珠                                                        CCT:    / K           BIN:1#
+                       Desiccant                                                  DT:2025/05/15         SDC:1
+                       湿度卡                                                        SN:L-008600006302-001
+                       Humidity indicator
+
+
+
+                                                                                             标签图示 Label diagram
+
+
+
+
+                   硬纸箱 (内部最大放52袋)
+                   Hard cardboard box (maximum
+                   capacity for 52 bags inside)
+
+
+
+
+   表面贴装LED采用卷盘包装，LED在用普通或防静电袋包装后再装在纸箱中. 纸箱用于保护运输途中LED不受机械冲击，
+   纸箱不防水，因此请注意防潮防水。
+   Surface mounted LEDs are packaged in rolls, and the LEDs are packaged in regular or anti-static bags before being packed in
+   cardboard boxes The cardboard box is used to protect the LED from mechanical impact during transportation. The cardboard box is
+   not waterproof, so please pay attention to moisture-proof and waterproof.
+
+
+电话:    (769)82632725         传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                                                               11 / 13
+       广东欧思科科技股份有限公司
+                                                                                                       文件编号:SK6805-EC20-001      Rev. No.: A1
+
+
+
+  17. 可靠性测试 Reliability testing:
+       序号                                                                                       参考标准
+                           实验项目                               实验条件                                                    判断
+       Serial                                                                                   Reference
+                         Pilot projects                 Experimental condition                                      Determine
+      Number                                                                                    standards
+
+                          冷热冲击                          100 ± 5°C ~ -40°C ± 5°C
+         1                                                                                   MIL-STD-202G                0/22
+                        Thermal Shock                   15min~15min 100cycles
+
+
+                           高温储藏                                                              JEITA ED-4701
+         2                                                Ta= +100ºC 1000hrs                                             0/22
+                    High temperature storage                                                     200 201
+
+
+
+                          低温储藏                                                               JEITA ED-4701
+         3                                                 Ta= -40ºC 1000hrs                                             0/22
+                    Low temperature storage                                                      200 202
+
+
+                        高温高湿储藏
+                                                                                             JEITA ED-4701
+         4         High temperature and high           Ta=60ºC RH=90% 1000hrs                                            0/22
+                                                                                                 100 103
+                       humidity storage
+
+
+                                                        -40ºC~25ºC~100ºC~25ºC
+                          温度循环                                                               JEITA ED-4701
+         5                                              30min~5min~30min~5min                                            0/22
+                      Temperature cycling                                                        100 105
+                                                              100 cycles
+
+                           耐焊接热
+                                                                                             JEITA ED-4701
+         6          Resistance to Soldering            Tsld = 260°C, 10sec. 2 times                                      0/22
+                                                                                                 300 301
+                             Heat
+
+                       常温寿命测试
+         7          Normal temperature life         25°C, IF: Typical current , 1000hrs      JESD22-A 108D               0/22
+                             test
+
+
+
+
+  失效判定标准 Failure criteria:
+                                                                                                判断标准
+          项目                符号                      测试条件                                     Judgment criteria
+         Project           Symbol                 Test conditions                     最小值                      最大值
+                                                                                   Minimum value            Maximum value
+                                               DC=5V,规格典型电流
+        发光强度                                                                        初始数据X0.7
+                              IV               DC=5V, Typical current                                              ---
+        Intensity                                                                  Initial data X0.7
+                                                   specification
+
+        耐焊接热                                   DC=5V,规格典型电流
+                                                                                            无死灯或明显损坏
+       Resistance to          ---              DC=5V, Typical current
+                                                                                      No dead lights or obvious damage
+      Soldering Heat                               specification
+
+
+
+电话:    (769)82632725        传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                                                  12 / 13
+      广东欧思科科技股份有限公司
+                                                                                       文件编号:SK6805-EC20-001    Rev. No.: A1
+
+
+
+
+   修订记录 Revision record
+         日期                                        修改/改变的原因                                        签名
+                       Rev. No.
+         Date                                Reason for modification/change                     Signature
+                                                          首次发行
+      2024-05-14          A0                                                                     李晶晶
+                                                          First issue
+                                   修改电气、极限参数、典型应用电路注释、包装数
+                                                              量
+      2025-08-25          A1                                                                     雷梁晨
+                                      Modify the electrical，limit parameters, typical
+                                   application circuit annotations, and packaging quantity
+
+
+
+
+电话:   (769)82632725   传真: (769)82632735
+官网：www.opscoled.com
+地址:东莞市企石镇上美路3号                                                                                                13 / 13
+

@@ -1,0 +1,34 @@
+{
+ "nota": "status: Q = cotação JLCPCB/LCSC 2026-11-22; E = estimativa; P = proposta, a validar no protótipo",
+ "grupos": [
+  {"grupo": "NÚCLEO FUNCIONAL · PLACA rev C", "itens": [
+   ["U1", "Microcontrolador USB", "STM32C071G8U6, Cortex-M0+ 48 MHz, 64 KB, QFN-28 4×4", 1, "LCSC C44521811", "SMT reflow", "Q"],
+   ["D1–D3", "LED RGB endereçável", "WS2816B-2020, 16 bit/canal, PWM 10 kHz, 2,2×2,0 mm", 3, "LCSC C4154877", "SMT reflow", "Q"],
+   ["J1", "Conector USB-C 16 p", "HRO TYPE-C-31-M-12, USB 2.0", 1, "LCSC C165948", "SMT reflow", "Q"],
+   ["U2", "Regulador 3,3 V", "AP2112K-3.3TRG1, 600 mA, SOT-23-5", 1, "LCSC C51118", "SMT reflow", "Q"],
+   ["U3", "Conversor de nível", "SN74AHCT1G125DBVR, SOT-23-5", 1, "LCSC C7484", "SMT reflow", "Q"],
+   ["U4", "Proteção ESD USB", "USBLC6-2SC6, SOT-23-6", 1, "LCSC C7519", "SMT reflow", "Q"],
+   ["C1", "Capacitor", "10 µF 0603 X5R", 1, "LCSC C19702", "SMT reflow", "Q"],
+   ["C2", "Capacitor", "1 µF 0402 X5R", 1, "LCSC C52923", "SMT reflow", "Q"],
+   ["C3–C8", "Capacitor", "100 nF 0402 X7R", 6, "LCSC C1525", "SMT reflow", "Q"],
+   ["R1, R2", "Resistor CC", "5,1 kΩ 0402", 2, "LCSC C25905", "SMT reflow", "Q"],
+   ["R3", "Resistor série dados", "33 Ω 0402", 1, "LCSC C25105", "SMT reflow", "Q"],
+   ["R4", "Resistor", "1 kΩ 0402", 1, "LCSC C11702", "SMT reflow", "Q"],
+   ["PCB", "Placa de circuito", "FR-4 2 camadas, 11×44×0,8 mm, 1 oz", 1, "JLCPCB (gerber rev C)", "fab. PCB", "E"]]},
+  {"grupo": "ESTRUTURA / CARCAÇA", "itens": [
+   ["P01", "Tubo difusor", "PC opalino Ø16/13 × 48 mm, fosco", 1, "a cotar (extrusão)", "extrusão + corte", "P"],
+   ["P02", "Tampa", "Al 6061-T6 Ø19 × 32 mm, anodizado preto", 1, "a cotar (CNC)", "torno CNC + anodização", "P"],
+   ["P03", "Berço da placa", "PC branco refletivo", 1, "a cotar", "SLA (lote 5–100) / injeção", "P"],
+   ["P04", "Tampão inferior", "PC opalino", 1, "a cotar", "SLA / injeção (molde família)", "P"]]},
+  {"grupo": "FIXAÇÃO", "itens": [
+   ["P05", "Passa-cabo bipartido", "TPE 60 Shore A", 1, "a cotar", "TPU impresso / injeção", "P"],
+   ["F01", "Encaixes e press-fit", "sem parafuso, sem cola", 0, "—", "—", "P"]]},
+  {"grupo": "ACESSÓRIOS", "itens": [
+   ["C01", "Cabo USB-C ↔ USB-C", "USB 2.0, 1,5 m, trançado; plugue ≤ 12,3 × 6,8 mm", 1, "a cotar (OEM)", "comprado pronto", "E"],
+   ["SW", "Software de status", "app desktop + firmware HID", 1, "desenvolvimento próprio", "—", "E"]]},
+  {"grupo": "EMBALAGEM", "itens": [
+   ["K01", "Caixa", "cartão kraft 60 × 40 × 130 mm com berço", 1, "gráfica BR", "corte e vinco", "E"],
+   ["K02", "Cartão de instruções", "A7 com QR para o software", 1, "gráfica BR", "impressão digital", "E"],
+   ["L01", "Etiquetas", "nº de série e lote", 2, "genérico", "térmica", "E"]]}
+ ]
+}

@@ -1,0 +1,462 @@
+                                                                                                                                       
+                                                                                                                                   
+                                                                                                                                     
+                                                                                                                          SCLS378L − AUGUST 1997 − REVISED JUNE 2005
+
+    D      Operating Range of 4.5 V to 5.5 V                                                        D Inputs Are TTL-Voltage Compatible
+    D      Max tpd of 6 ns at 5 V                                                                   D Latch-Up Performance Exceeds 250 mA Per
+    D      Low Power Consumption, 10-µA Max ICC                                                             JESD 17
+    D      ±8-mA Output Drive at 5 V
+                                          DBV PACKAGE
+                                           (TOP VIEW)                                          DCK PACKAGE                           DRL PACKAGE
+                                                                                                (TOP VIEW)                            (TOP VIEW)
+                              OE               1              5             VCC                                                   OE     1         5   VCC
+                                                                                        OE         1         5      VCC
+                                                                                                                                     A   2
+                                 A             2                                          A        2
+                                                                                                                                GND      3         4   Y
+                                                                                       GND         3         4      Y
+                           GND                 3              4             Y
+
+                             See mechanical drawings for dimensions.
+
+
+  description/ordering information
+         The SN74AHCT1G125 is a single bus buffer gate/line driver with 3-state output. The output is disabled when
+         the output-enable (OE) input is high. When OE is low, true data is passed from the A input to the Y output.
+         To ensure the high-impedance state during power up or power down, OE should be tied to VCC through a pullup
+         resistor; the minimum value of the resistor is determined by the current-sinking capability of the driver.
+
+                                                                            ORDERING INFORMATION
+                                                                                                                  ORDERABLE                  TOP-SIDE
+                                   TA                                       PACKAGE†
+                                                                                                                 PART NUMBER                 MARKING‡
+                                                                                        Reel of 3000         SN74AHCT1G125DBVR
+                                                      SOT (SOT-23) − DBV                                                                     B25_
+                                                                                        Reel of 250          SN74AHCT1G125DBVT
+                           −40°C to 85°C                                                Reel of 3000         SN74AHCT1G125DCKR
+                                                      SOT (SC-70) − DCK                                                                      BM_
+                                                                                        Reel of 250          SN74AHCT1G125DCKT
+                                                      SOT (SOT-553) − DRL               Reel of 4000         SN74AHCT1G125DRLR               BM_
+                        † Package drawings, standard packing quantities, thermal data, symbolization, and PCB design guidelines are
+                          available at www.ti.com/sc/package.
+                        ‡ The actual top-side marking has one additional character that designates the assembly/test site.
+
+                                                                                      FUNCTION TABLE
+                                                                                   INPUTS           OUTPUT
+                                                                                  OE       A          Y
+                                                                                  L        H            H
+                                                                                  L        L            L
+                                                                                  H        X            Z
+
+
+logic diagram (positive logic)
+                                                                        1
+                                                                  OE
+
+                                                                        2                                            4
+                                                                   A                                                      Y
+
+                    Please be aware that an important notice concerning availability, standard warranty, and use in critical applications of
+                    Texas Instruments semiconductor products and disclaimers thereto appears at the end of this data sheet.
+
+
+   !" # $%&" !#  '%()$!" *!"&+                                                                Copyright  2005, Texas Instruments Incorporated
+*%$"# $ " #'&$$!"# '& ",& "&#  &-!# #"%&"#
+#"!*!* .!!"/+ *%$" '$&##0 *&# " &$&##!)/ $)%*&
+"&#"0  !)) '!!&"&#+
+
+
+
+                                                                        POST OFFICE BOX 655303   • DALLAS, TEXAS 75265                                                      1
+
+     
+   
+SCLS378L − AUGUST 1997 − REVISED JUNE 2005
+
+
+absolute maximum ratings over operating free-air temperature range (unless otherwise noted)†
+          Supply voltage range, VCC . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . −0.5 V to 7 V
+          Input voltage range, VI (see Note 1) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . −0.5 V to 7 V
+          Output voltage range, VO (see Note 1) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . −0.5 V to VCC + 0.5 V
+          Input clamp current, IIK (VI < 0) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . −20 mA
+          Output clamp current, IOK (VO < 0 or VO > VCC) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ±20 mA
+          Continuous output current, IO (VO = 0 to VCC) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ±25 mA
+          Continuous current through VCC or GND . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ±50 mA
+          Package thermal impedance, θJA (see Note 2): DBV package . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 206°C/W
+                                                                       DCK package . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 252°C/W
+                                                                       DRL package . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 142°C/W
+          Storage temperature range, Tstg . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . −65°C to 150°C
+† Stresses beyond those listed under “absolute maximum ratings” may cause permanent damage to the device. These are stress ratings only, and
+  functional operation of the device at these or any other conditions beyond those indicated under “recommended operating conditions” is not
+  implied. Exposure to absolute-maximum-rated conditions for extended periods may affect device reliability.
+NOTES: 1. The input and output voltage ratings may be exceeded if the input and output current ratings are observed.
+           2. The package thermal impedance is calculated in accordance with JESD 51-7.
+
+
+recommended operating conditions (see Note 3)
+                                                                                                                                            MIN     MAX       UNIT
+    VCC         Supply voltage                                                                                                               4.5       5.5       V
+    VIH         High-level input voltage                                                                                                       2                 V
+    VIL         Low-level input voltage                                                                                                                0.8       V
+    VI          Input voltage                                                                                                                  0       5.5       V
+    VO          Output voltage                                                                                                                 0     VCC         V
+    IOH         High-level output current                                                                                                             −8        mA
+    IOL         Low-level output current                                                                                                                 8      mA
+    ∆t/∆v       Input transition rise or fall rate                                                                                                     20      ns/V
+ TA      Operating free-air temperature                                                                         −40       85      °C
+NOTE 3: All unused inputs of the device must be held at VCC or GND to ensure proper device operation. Refer to the TI application report,
+        Implications of Slow or Floating CMOS Inputs, literature number SCBA004.
+
+
+electrical characteristics over recommended operating free-air temperature range (unless
+otherwise noted)
+                                                                                                                     TA = 25°C
+     PARAMETER                               TEST CONDITIONS                                   VCC                                          MIN     MAX       UNIT
+                                                                                                              MIN       TYP    MAX
+                           IOH = −50 mA                                                                        4.4       4.5                 4.4
+          VOH                                                                                 4.5 V                                                              V
+                           IOH = −8 mA                                                                        3.94                           3.8
+                           IOL = 50 mA                                                                                             0.1                 0.1
+          VOL                                                                                 4.5 V                                                              V
+                           IOL = 8 mA                                                                                            0.36                0.44
+          II               VI = 5.5 V or GND                                               0 V to 5.5 V                          ±0.1                  ±1       mA
+          IOZ              VO = VCC or GND                                                    5.5 V                             ±0.25                ±2.5       mA
+          ICC              VI = VCC or GND,           IO = 0                                  5.5 V                                  1                 10       mA
+          ∆ICC‡            One input at 3.4 V,        Other input at VCC or GND               5.5 V                              1.35                  1.5      mA
+          Ci               VI = VCC or GND                                                     5V                          4        10                 10       pF
+          Co               VO = VCC or GND                                                     5V                         10                                    pF
+‡ This is the increase in supply current for each input at one of the specified TTL voltage levels, rather than 0 V or VCC.
+
+
+
+
+2                                                         POST OFFICE BOX 655303    • DALLAS, TEXAS 75265
+                                                                                                              
+                                                                                                          
+                                                                                                            
+                                                                                                SCLS378L − AUGUST 1997 − REVISED JUNE 2005
+
+
+switching characteristics over recommended operating free-air temperature range,
+VCC = 5 V ± 0.5 V (unless otherwise noted) (see Figure 1)
+                           FROM                  TO                 LOAD                            TA = 25°C
+   PARAMETER                                                                                                          MIN       MAX    UNIT
+                          (INPUT)             (OUTPUT)           CAPACITANCE                  MIN      TYP    MAX
+       tPLH                                                                                             3.8     5.5         1    6.5
+                             A                     Y                   CL = 15 pF                                                       ns
+       tPHL                                                                                             3.8     5.5         1    6.5
+       tPZH                                                                                             3.6     5.1         1     6
+                            OE                     Y                   CL = 15 pF                                                       ns
+       tPZL                                                                                             3.6     5.1         1     6
+       tPHZ                                                                                             4.6     6.8         1     8
+                            OE                     Y                   CL = 15 pF                                                       ns
+       tPLZ                                                                                             4.6     6.8         1     8
+       tPLH                                                                                             5.3     7.5         1    8.5
+                             A                     Y                   CL = 50 pF                                                       ns
+       tPHL                                                                                             5.3     7.5         1    8.5
+       tPZH                                                                                             5.1     7.1         1     8
+                            OE                     Y                   CL = 50 pF                                                       ns
+       tPZL                                                                                             5.1     7.1         1     8
+       tPHZ                                                                                             6.1     8.8         1    10
+                            OE                     Y                   CL = 50 pF                                                       ns
+       tPLZ                                                                                             6.1     8.8         1    10
+
+
+operating characteristics, VCC = 5 V, TA = 25°C
+                                        PARAMETER                                                     TEST CONDITIONS           TYP    UNIT
+ Cpd    Power dissipation capacitance                                                                No load,   f = 1 MHz        14     pF
+
+
+
+
+                                             POST OFFICE BOX 655303   • DALLAS, TEXAS 75265                                                   3
+
+     
+   
+SCLS378L − AUGUST 1997 − REVISED JUNE 2005
+
+
+                                        PARAMETER MEASUREMENT INFORMATION
+                                                                                                    VCC
+                                                                       RL = 1 kΩ         S1           Open
+       From Output            Test           From Output                                                                      TEST              S1
+         Under Test           Point            Under Test                                           GND                 tPLH/tPHL              Open
+                     CL                                    CL                                                           tPLZ/tPZL              VCC
+            (see Note A)                          (see Note A)                                                          tPHZ/tPZH              GND
+                                                                                                                        Open Drain             VCC
+
+
+           LOAD CIRCUIT FOR                                   LOAD CIRCUIT FOR
+         TOTEM-POLE OUTPUTS                           3-STATE AND OPEN-DRAIN OUTPUTS
+
+                                                                                                                                                     3V
+                                                                                Timing Input                          1.5 V
+                                   tw                                                                                                                0V
+                                                                                                                                 th
+                                                               3V                                   tsu
+                                                                                                                                                     3V
+            Input          1.5 V                   1.5 V
+                                                                                   Data Input                1.5 V             1.5 V
+                                                               0V                                                                                    0V
+                       VOLTAGE WAVEFORMS                                                                   VOLTAGE WAVEFORMS
+                         PULSE DURATION                                                                   SETUP AND HOLD TIMES
+
+                                                               3V                                                                                    3V
+                                                                                      Output
+            Input             1.5 V           1.5 V                                                          1.5 V              1.5 V
+                                                                                      Control
+                                                               0V                                                                                    0V
+
+                    tPLH                                tPHL                                       tPZL                                 tPLZ
+                                                                                     Output
+                                                            VOH                  Waveform 1                                                          ≈VCC
+        In-Phase                        50% VCC       50% VCC                                                        50% VCC
+          Output                                                                  S1 at VCC                                           VOL + 0.3 V
+                                                            VOL                 (see Note B)                                                      VOL
+                    tPHL                                tPLH                                       tPZH                                 tPHZ
+                                                                                     Output
+                                                            VOH                                                                                      VOH
+ Out-of-Phase                                                                    Waveform 2                                           VOH − 0.3 V
+                                        50% VCC       50% VCC                     S1 at GND                          50% VCC
+       Output
+                                                            VOL                 (see Note B)                                                         ≈0 V
+                     VOLTAGE WAVEFORMS                                                                 VOLTAGE WAVEFORMS
+                  PROPAGATION DELAY TIMES                                                            ENABLE AND DISABLE TIMES
+             INVERTING AND NONINVERTING OUTPUTS                                                    LOW- AND HIGH-LEVEL ENABLING
+
+    NOTES: A. CL includes probe and jig capacitance.
+           B. Waveform 1 is for an output with internal conditions such that the output is low, except when disabled by the output control.
+              Waveform 2 is for an output with internal conditions such that the output is high, except when disabled by the output control.
+           C. All input pulses are supplied by generators having the following characteristics: PRR ≤ 1 MHz, ZO = 50 Ω, tr ≤ 3 ns, tf ≤ 3 ns.
+           D. The outputs are measured one at a time, with one input transition per measurement.
+           E. All parameters and waveforms are not applicable to all devices.
+
+                                           Figure 1. Load Circuit and Voltage Waveforms
+
+
+
+
+4                                                 POST OFFICE BOX 655303   • DALLAS, TEXAS 75265
+                                                                                                                                           PACKAGE OPTION ADDENDUM
+
+
+www.ti.com                                                                                                                                                                           10-Jun-2014
+
+
+PACKAGING INFORMATION
+
+        Orderable Device           Status   Package Type Package Pins Package            Eco Plan        Lead/Ball Finish        MSL Peak Temp        Op Temp (°C)          Device Marking         Samples
+                                     (1)                 Drawing        Qty                  (2)                 (6)                     (3)                                      (4/5)
+
+      74AHCT1G125DBVRE4           ACTIVE        SOT-23        DBV       5     3000     Green (RoHS          CU NIPDAU          Level-1-260C-UNLIM          -40 to 85   (B253 ~ B25G ~
+                                                                                        & no Sb/Br)                                                                       B25J ~ B25L ~
+                                                                                                                                                                          B25S)
+      74AHCT1G125DBVRG4           ACTIVE        SOT-23        DBV       5     3000     Green (RoHS          CU NIPDAU          Level-1-260C-UNLIM          -40 to 85   (B253 ~ B25G ~
+                                                                                        & no Sb/Br)                                                                       B25J ~ B25L ~
+                                                                                                                                                                          B25S)
+      74AHCT1G125DBVTE4           ACTIVE        SOT-23        DBV       5      250     Green (RoHS          CU NIPDAU          Level-1-260C-UNLIM          -40 to 85   (B253 ~ B25G ~
+                                                                                        & no Sb/Br)                                                                       B25L ~ B25S)
+      74AHCT1G125DBVTG4           ACTIVE        SOT-23        DBV       5      250     Green (RoHS          CU NIPDAU          Level-1-260C-UNLIM          -40 to 85   (B253 ~ B25G ~
+                                                                                        & no Sb/Br)                                                                       B25L ~ B25S)
+      74AHCT1G125DCKRG4           ACTIVE         SC70         DCK       5     3000     Green (RoHS          CU NIPDAU          Level-1-260C-UNLIM          -40 to 85   (BM3 ~ BMG ~ BMJ ~
+                                                                                        & no Sb/Br)                                                                      BML ~ BMS)
+      74AHCT1G125DCKTE4           ACTIVE         SC70         DCK       5      250     Green (RoHS          CU NIPDAU          Level-1-260C-UNLIM          -40 to 85   (BM3 ~ BMG ~ BML ~
+                                                                                        & no Sb/Br)                                                                      BMS)
+      74AHCT1G125DCKTG4           ACTIVE         SC70         DCK       5      250     Green (RoHS          CU NIPDAU          Level-1-260C-UNLIM          -40 to 85   (BM3 ~ BMG ~ BML ~
+                                                                                        & no Sb/Br)                                                                      BMS)
+      74AHCT1G125DRLRG4           ACTIVE         SOT          DRL       5     4000     Green (RoHS          CU NIPDAU          Level-1-260C-UNLIM          -40 to 85   (BMB ~ BMS)
+                                                                                        & no Sb/Br)
+      SN74AHCT1G125DBVR           ACTIVE        SOT-23        DBV       5     3000     Green (RoHS          CU NIPDAU          Level-1-260C-UNLIM          -40 to 85   (B253 ~ B25G ~
+                                                                                        & no Sb/Br)                                                                       B25J ~ B25L ~
+                                                                                                                                                                          B25S)
+      SN74AHCT1G125DBVT           ACTIVE        SOT-23        DBV       5      250     Green (RoHS          CU NIPDAU          Level-1-260C-UNLIM          -40 to 85   (B253 ~ B25G ~
+                                                                                        & no Sb/Br)                                                                       B25L ~ B25S)
+      SN74AHCT1G125DCKR           ACTIVE         SC70         DCK       5     3000     Green (RoHS          CU NIPDAU          Level-1-260C-UNLIM          -40 to 85   (BM3 ~ BMG ~ BMJ ~
+                                                                                        & no Sb/Br)                                                                      BML ~ BMS)
+      SN74AHCT1G125DCKT           ACTIVE         SC70         DCK       5      250     Green (RoHS          CU NIPDAU          Level-1-260C-UNLIM          -40 to 85   (BM3 ~ BMG ~ BML ~
+                                                                                        & no Sb/Br)                                                                      BMS)
+      SN74AHCT1G125DRLR           ACTIVE         SOT          DRL       5     4000     Green (RoHS          CU NIPDAU          Level-1-260C-UNLIM          -40 to 85   (BMB ~ BMS)
+                                                                                        & no Sb/Br)
+
+(1)
+   The marketing status values are defined as follows:
+ACTIVE: Product device recommended for new designs.
+LIFEBUY: TI has announced that the device will be discontinued, and a lifetime-buy period is in effect.
+NRND: Not recommended for new designs. Device is in production to support existing customers, but TI does not recommend using this part in a new design.
+PREVIEW: Device has been announced but is not in production. Samples may or may not be available.
+OBSOLETE: TI has discontinued the production of the device.
+
+
+                                                                                         Addendum-Page 1
+                                                                                                                                                     PACKAGE OPTION ADDENDUM
+
+
+www.ti.com                                                                                                                                                                                           10-Jun-2014
+
+
+
+
+(2)
+   Eco Plan - The planned eco-friendly classification: Pb-Free (RoHS), Pb-Free (RoHS Exempt), or Green (RoHS & no Sb/Br) - please check http://www.ti.com/productcontent for the latest availability
+information and additional product content details.
+TBD: The Pb-Free/Green conversion plan has not been defined.
+Pb-Free (RoHS): TI's terms "Lead-Free" or "Pb-Free" mean semiconductor products that are compatible with the current RoHS requirements for all 6 substances, including the requirement that
+lead not exceed 0.1% by weight in homogeneous materials. Where designed to be soldered at high temperatures, TI Pb-Free products are suitable for use in specified lead-free processes.
+Pb-Free (RoHS Exempt): This component has a RoHS exemption for either 1) lead-based flip-chip solder bumps used between the die and package, or 2) lead-based die adhesive used between
+the die and leadframe. The component is otherwise considered Pb-Free (RoHS compatible) as defined above.
+Green (RoHS & no Sb/Br): TI defines "Green" to mean Pb-Free (RoHS compatible), and free of Bromine (Br) and Antimony (Sb) based flame retardants (Br or Sb do not exceed 0.1% by weight
+in homogeneous material)
+
+(3)
+      MSL, Peak Temp. - The Moisture Sensitivity Level rating according to the JEDEC industry standard classifications, and peak solder temperature.
+
+(4)
+      There may be additional marking, which relates to the logo, the lot trace code information, or the environmental category on the device.
+
+(5)
+   Multiple Device Markings will be inside parentheses. Only one Device Marking contained in parentheses and separated by a "~" will appear on a device. If a line is indented then it is a continuation
+of the previous line and the two combined represent the entire Device Marking for that device.
+
+(6)
+   Lead/Ball Finish - Orderable Devices may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead/Ball Finish values may wrap to two lines if the finish
+value exceeds the maximum column width.
+
+
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information
+provided by third parties, and makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and
+continues to take reasonable steps to provide representative and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals.
+TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers and other limited information may not be available for release.
+
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+
+OTHER QUALIFIED VERSIONS OF SN74AHCT1G125 :
+
+• Automotive: SN74AHCT1G125-Q1
+
+NOTE: Qualified Version Definitions:
+
+           • Automotive - Q100 devices qualified for high-reliability automotive applications targeting zero defects
+
+
+
+
+                                                                                                  Addendum-Page 2
+                                                                   PACKAGE MATERIALS INFORMATION
+
+www.ti.com                                                                                                                  9-Apr-2014
+
+
+
+TAPE AND REEL INFORMATION
+
+
+
+
+*All dimensions are nominal
+             Device           Package Package Pins   SPQ       Reel   Reel   A0            B0     K0     P1     W     Pin1
+                               Type Drawing                  Diameter Width (mm)          (mm)   (mm)   (mm)   (mm) Quadrant
+                                                               (mm) W1 (mm)
+ SN74AHCT1G125DBVR            SOT-23   DBV     5     3000      180.0      9.2      3.17   3.23   1.37   4.0    8.0     Q3
+ SN74AHCT1G125DBVR            SOT-23   DBV     5     3000      178.0      9.2      3.3    3.2    1.55   4.0    8.0     Q3
+ SN74AHCT1G125DBVR            SOT-23   DBV     5     3000      180.0      8.4      3.23   3.17   1.37   4.0    8.0     Q3
+ SN74AHCT1G125DBVT            SOT-23   DBV     5     250       178.0      9.0      3.23   3.17   1.37   4.0    8.0     Q3
+ SN74AHCT1G125DBVT            SOT-23   DBV     5     250       178.0      9.2      3.3    3.2    1.55   4.0    8.0     Q3
+ SN74AHCT1G125DCKR             SC70    DCK     5     3000      180.0      9.2      2.3    2.55   1.2    4.0    8.0     Q3
+ SN74AHCT1G125DCKR             SC70    DCK     5     3000      178.0      9.2      2.4    2.4    1.22   4.0    8.0     Q3
+ SN74AHCT1G125DCKT             SC70    DCK     5     250       178.0      9.0      2.4    2.5    1.2    4.0    8.0     Q3
+ SN74AHCT1G125DCKT             SC70    DCK     5     250       180.0      9.2      2.3    2.55   1.2    4.0    8.0     Q3
+ SN74AHCT1G125DCKT             SC70    DCK     5     250       178.0      9.2      2.4    2.4    1.22   4.0    8.0     Q3
+ SN74AHCT1G125DRLR             SOT     DRL     5     4000      180.0      8.4      1.98   1.78   0.69   4.0    8.0     Q3
+ SN74AHCT1G125DRLR             SOT     DRL     5     4000      180.0      9.5      1.78   1.78   0.69   4.0    8.0     Q3
+
+
+
+
+                                                           Pack Materials-Page 1
+                                                                PACKAGE MATERIALS INFORMATION
+
+www.ti.com                                                                                                           9-Apr-2014
+
+
+
+
+*All dimensions are nominal
+             Device           Package Type   Package Drawing   Pins     SPQ     Length (mm)   Width (mm)   Height (mm)
+ SN74AHCT1G125DBVR              SOT-23            DBV           5       3000       205.0        200.0         33.0
+ SN74AHCT1G125DBVR              SOT-23            DBV           5       3000       180.0        180.0         18.0
+ SN74AHCT1G125DBVR              SOT-23            DBV           5       3000       202.0        201.0         28.0
+ SN74AHCT1G125DBVT              SOT-23            DBV           5       250        180.0        180.0         18.0
+ SN74AHCT1G125DBVT              SOT-23            DBV           5       250        180.0        180.0         18.0
+ SN74AHCT1G125DCKR               SC70             DCK           5       3000       205.0        200.0         33.0
+ SN74AHCT1G125DCKR               SC70             DCK           5       3000       180.0        180.0         18.0
+ SN74AHCT1G125DCKT               SC70             DCK           5       250        180.0        180.0         18.0
+ SN74AHCT1G125DCKT               SC70             DCK           5       250        205.0        200.0         33.0
+ SN74AHCT1G125DCKT               SC70             DCK           5       250        180.0        180.0         18.0
+ SN74AHCT1G125DRLR                SOT             DRL           5       4000       202.0        201.0         28.0
+ SN74AHCT1G125DRLR                SOT             DRL           5       4000       184.0        184.0         19.0
+
+
+
+
+                                                        Pack Materials-Page 2
+                                                              IMPORTANT NOTICE
+Texas Instruments Incorporated and its subsidiaries (TI) reserve the right to make corrections, enhancements, improvements and other
+changes to its semiconductor products and services per JESD46, latest issue, and to discontinue any product or service per JESD48, latest
+issue. Buyers should obtain the latest relevant information before placing orders and should verify that such information is current and
+complete. All semiconductor products (also referred to herein as “components”) are sold subject to TI’s terms and conditions of sale
+supplied at the time of order acknowledgment.
+TI warrants performance of its components to the specifications applicable at the time of sale, in accordance with the warranty in TI’s terms
+and conditions of sale of semiconductor products. Testing and other quality control techniques are used to the extent TI deems necessary
+to support this warranty. Except where mandated by applicable law, testing of all parameters of each component is not necessarily
+performed.
+TI assumes no liability for applications assistance or the design of Buyers’ products. Buyers are responsible for their products and
+applications using TI components. To minimize the risks associated with Buyers’ products and applications, Buyers should provide
+adequate design and operating safeguards.
+TI does not warrant or represent that any license, either express or implied, is granted under any patent right, copyright, mask work right, or
+other intellectual property right relating to any combination, machine, or process in which TI components or services are used. Information
+published by TI regarding third-party products or services does not constitute a license to use such products or services or a warranty or
+endorsement thereof. Use of such information may require a license from a third party under the patents or other intellectual property of the
+third party, or a license from TI under the patents or other intellectual property of TI.
+Reproduction of significant portions of TI information in TI data books or data sheets is permissible only if reproduction is without alteration
+and is accompanied by all associated warranties, conditions, limitations, and notices. TI is not responsible or liable for such altered
+documentation. Information of third parties may be subject to additional restrictions.
+Resale of TI components or services with statements different from or beyond the parameters stated by TI for that component or service
+voids all express and any implied warranties for the associated TI component or service and is an unfair and deceptive business practice.
+TI is not responsible or liable for any such statements.
+Buyer acknowledges and agrees that it is solely responsible for compliance with all legal, regulatory and safety-related requirements
+concerning its products, and any use of TI components in its applications, notwithstanding any applications-related information or support
+that may be provided by TI. Buyer represents and agrees that it has all the necessary expertise to create and implement safeguards which
+anticipate dangerous consequences of failures, monitor failures and their consequences, lessen the likelihood of failures that might cause
+harm and take appropriate remedial actions. Buyer will fully indemnify TI and its representatives against any damages arising out of the use
+of any TI components in safety-critical applications.
+In some cases, TI components may be promoted specifically to facilitate safety-related applications. With such components, TI’s goal is to
+help enable customers to design and create their own end-product solutions that meet applicable functional safety standards and
+requirements. Nonetheless, such components are subject to these terms.
+No TI components are authorized for use in FDA Class III (or similar life-critical medical equipment) unless authorized officers of the parties
+have executed a special agreement specifically governing such use.
+Only those TI components which TI has specifically designated as military grade or “enhanced plastic” are designed and intended for use in
+military/aerospace applications or environments. Buyer acknowledges and agrees that any military or aerospace use of TI components
+which have not been so designated is solely at the Buyer's risk, and that Buyer is solely responsible for compliance with all legal and
+regulatory requirements in connection with such use.
+TI has specifically designated certain components as meeting ISO/TS16949 requirements, mainly for automotive use. In any case of use of
+non-designated products, TI will not be responsible for any failure to meet ISO/TS16949.
+Products                                                           Applications
+Audio                                www.ti.com/audio              Automotive and Transportation      www.ti.com/automotive
+Amplifiers                           amplifier.ti.com              Communications and Telecom         www.ti.com/communications
+Data Converters                      dataconverter.ti.com          Computers and Peripherals          www.ti.com/computers
+DLP® Products                        www.dlp.com                   Consumer Electronics               www.ti.com/consumer-apps
+DSP                                  dsp.ti.com                    Energy and Lighting                www.ti.com/energy
+Clocks and Timers                    www.ti.com/clocks             Industrial                         www.ti.com/industrial
+Interface                            interface.ti.com              Medical                            www.ti.com/medical
+Logic                                logic.ti.com                  Security                           www.ti.com/security
+Power Mgmt                           power.ti.com                  Space, Avionics and Defense        www.ti.com/space-avionics-defense
+Microcontrollers                     microcontroller.ti.com        Video and Imaging                  www.ti.com/video
+RFID                                 www.ti-rfid.com
+OMAP Applications Processors         www.ti.com/omap               TI E2E Community                   e2e.ti.com
+Wireless Connectivity                www.ti.com/wirelessconnectivity
+
+
+                             Mailing Address: Texas Instruments, Post Office Box 655303, Dallas, Texas 75265
+                                            Copyright © 2014, Texas Instruments Incorporated
+

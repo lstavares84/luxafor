@@ -1,0 +1,44 @@
+SIGNA Pendente rev B + placa rev D — verificação de montagem (2026-11-22)
+== Interferências (volume de interseção, mm³) ==
+  tampao x berco: 1.402  [intencional: press-fit do pino do berço no tampão]
+  passa_cabo x cabo: 27.609  [intencional: aperto do passa-cabo (furo Ø3.3) no cabo Ø3.8]
+  sobremolde x alivio: 13.278  [intencional: mesmo objeto (sobremolde + alívio)]
+  alivio x cabo: 15.311  [intencional: mesmo objeto (capa entra no alívio do plugue)]
+  -> interferências não intencionais: 0
+== Folgas (mm; 0,000 = contato projetado) ==
+  placa (PCB) – berço: 0.000   (contato de apoio: orelhas no fundo das fendas da flange (Z=50.75) = assento)
+  orelhas da placa – ressalto da tampa (axial): 0.250   (batente para cima: botão 1,6 N e extração do cabo 8–20 N)
+  borda de baixo da placa – fundo das ranhuras: 0.300   (sem apoio aqui (evita hiperestático))
+  orelhas – fundo lateral da fenda (por lado): 0.150
+  orelhas – tampa (mín. 3D): 0.155
+  orelhas – tubo (mín. 3D): 0.499   (orelhas ficam acima do tubo (Z ≥ 50.75 > 50))
+  placa na ranhura: folga por face (espessura): 0.050   (ranhura 0,90 × placa 0,80)
+  placa na ranhura: folga lateral total: 0.300   (fundo da ranhura |x| 5,65 × borda 5,50 (por lado 0,15))
+  placa (com componentes) – tubo: 0.499
+  placa (com componentes) – tampão: 2.050
+  LED (topo) – difusor, frente: 7.265   (WS2816B 0,84 mm; parede interna do tubo)
+  corpo do botão S1 – tubo: 3.683
+  botão P06 – haste do S1 (axial, nominal): 0.400   (tubo 48 ±0,2 e orelhas da placa ±0,2 -> 0,0 a 0,8 mm (pior caso); curso elétrico 0,2)
+  botão P06 – tampão (radial no furo): 0.100   (colar apoiado no fundo do rebaixo por gravidade (contato))
+  colar P06 – parede do rebaixo (radial): 0.200
+  botão P06 – berço: 0.695
+  botão P06 – placa: 0.941
+  curso total até acionar (pior caso): 1.000   (folga máx. 0,8 + curso 0,2; nominal 0.6)
+  casca do plugue – cavidade do receptáculo (lateral): 0.045   (spec: 8,34 × 2,56 vs 8,25 × 2,40)
+  casca do plugue – cavidade do receptáculo (altura): 0.080
+  casca do plugue – carcaça J1 (mín. 3D): 0.045
+  língua J1 – interior do plugue (mín. 3D): 0.091
+  ponta da casca – fundo da cavidade (axial): 0.400
+  sobremolde – flange do berço: 0.850   (boca do USB-C fica 0.40 mm acima da flange: qualquer casca exposta ≥ 5.80 mm assenta)
+  espaço p/ sobremolde + alívio (boca → topo do alívio do passa-cabo): 25.600   (cabos com sobremolde + alívio até ~24,5 mm e alívio ≤ Ø6,4 nos últimos 4,5 mm)
+  sobremolde – boca do receptáculo (axial): 0.450
+  sobremolde – tampa (cavidade Ø13.6): 0.969
+  sobremolde – passa-cabo: 3.650
+  alívio do plugue – passa-cabo: 0.663
+  cabo – tampa (furo do topo): 4.470
+  casca do plugue – placa (PCB): 0.520
+  sobremolde passa no furo Ø12.8 (diagonal 11.65): 0.573   (por lado; plugues até 12,3 × 6,8 com r ≥ 3 também passam)
+LEDs em Z = [12.9, 19.9, 26.9]; botão em Y = 0.10 (quase no eixo); eixo USB em Y = 0.03
+cabo modelado: 225 mm (capa Ø3.8) do alívio até atrás do monitor; o resto do cabo de 1,5 m não é modelado
+altura do corpo: 78.0 mm; com bota do passa-cabo 88.2 mm; botão sai 0.3 mm abaixo do tampão
+massas (g) estimadas: {'tubo': 3.94, 'tampao': 0.95, 'berco': 2.1, 'tampa': 10.97, 'passa_cabo': 0.97, 'botao': 0.06} + placa ~1,0  total ~20.0 g (sem cabo)

@@ -1,0 +1,5 @@
+# SIGNA — alternativa mínima para o Codex CLI, em ~/.codex/config.toml (só no arquivo do usuário;
+# o Codex ignora `notify` em .codex/config.toml de projeto).
+# O `notify` só emite "agent-turn-complete" (fim do turno) -> IA DESOCUPADA.
+# Para processando/atenção/erro use os hooks (codex-hooks.json). Docs: https://learn.chatgpt.com/docs/config-file/config-advanced
+notify = ["signa-cli", "notify", "codex"]

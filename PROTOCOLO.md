@@ -29,8 +29,12 @@ Descritor HID (33 bytes): página vendor `0xFF00`, um Input de 8 × uint8 e um O
 | `03` | Strobe | `03 LED R G B tempo 00 rep` | `42` e depois `00 01` |
 | `04` | Wave | `04 tipo R G B 00 rep vel` | `42` (e `00 01` só no tipo 5) |
 | `06` | Padrão | `06 id rep` | `42` e depois `00 01` (exceto o padrão 2) |
-| `80` | Versão do firmware | `80` | `80 3c` |
-| `00`, `51`, `52`, `62` | desconhecidos **[?]** | | `00` responde `42`; `51`/`52` ecoam o argumento; `62` responde `00` ou `ff` |
+| `80` | Versão do firmware | `80` | `80 3c` (os bytes seguintes parecem a cópia do serial no boot) |
+| `51` | Gravar serial (6 bytes) na NVM **[M]** | `51 b1 b2 b3 b4 b5 b6` | ecoa os argumentos |
+| `52` | Gravar os 4 primeiros bytes do serial na NVM **[M]** | `52 b1 b2 b3 b4` | ecoa os argumentos |
+| `62` | Ler o serial atual (não grava) **[M]** | `62` | `62 b1 b2 b3 b4` (os 4 primeiros, como medido) |
+
+Os opcodes `05` e `07`–`0F` **não existem**: o aparelho não responde. O `00` aparente nas primeiras varreduras era o Report ID engolido pelo `hidraw` (o aparelho recebia o segundo byte).
 
 ### Endereço de LED (byte 1)
 - `01`, `02`, `03` **[V]**: LED individual (baixo, meio, topo).
@@ -87,9 +91,10 @@ Em strobe, wave e padrão, `rep = 0` repete até chegar outro comando. Nenhum ev
 
 ## Incidentes durante a engenharia reversa
 1. **Travamento com `01 13 …`.** Um reset USB por software (`USBDEVFS_RESET`) recuperou o aparelho uma vez. Na segunda tentativa, o processo ficou preso no kernel e travou o USB do barramento, e foi preciso reiniciar o PC. Não use reset por software; reconecte o aparelho fisicamente.
-2. **O serial mudou de forma permanente** de `000000002498` para `000000000000`. Isso aconteceu depois das escritas em `51`, `52` e `62` e do travamento com `0x13`; não se sabe qual dos dois causou. O valor fica guardado em memória não volátil.
+2. **O serial mudou de forma permanente** de `000000002498` para `000000000000`. Os testes posteriores mostraram que `51` grava 6 bytes do serial na NVM e `52` grava os 4 primeiros; `62` só lê. A troca é consistente com uma escrita de zeros via `51` ou `52`. Na época não foi possível separar isso do travamento com `0x13`. O valor fica guardado em memória não volátil.
 
 ## Em aberto
-- O que fazem `00`, `51`, `52` e `62`. Podem gravar na memória permanente, então só devem ser testados com cuidado.
 - Endereços de `14` a `fe` e padrões 0/9+ (risco de travar).
 - Firmware: identificar o MCU (abrir o case) e verificar ICSP ou bootloader.
+
+`51`, `52` e `62` foram identificados: ver a tabela de comandos. `51` e `52` **gravam** o serial; não os use em um aparelho cujo serial você queira preservar.

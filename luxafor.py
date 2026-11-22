@@ -8,7 +8,7 @@ Uso:
   luxafor.py wave    <tipo 1-5> <cor> [rep=3] [vel=30] # vel maior = mais lento
   luxafor.py pattern <id 1-8 | nome> [rep=1]           # rep 0 = repetir até outro comando
   luxafor.py off | version | listen
-  luxafor.py raw <hex ...>                             # 8 bytes crus (use com cuidado)
+  luxafor.py raw <hex ...>                             # 8 bytes crus (0x51/0x52 gravam o serial; 0x13 trava)
   Adicione --wait para bloquear até o evento de fim (fade, strobe, wave 5, pattern).
 
 <led>: all | bottom | middle | top | 1 | 2 | 3
@@ -56,6 +56,8 @@ PATTERN_BY_NAME = {name: pid for pid, (name, _) in PATTERNS.items()}
 
 CMD_STATIC, CMD_FADE, CMD_STROBE, CMD_WAVE, CMD_PATTERN = 0x01, 0x02, 0x03, 0x04, 0x06
 CMD_VERSION = 0x80
+# 0x51 grava 6 bytes do serial na NVM; 0x52 grava os 4 primeiros; 0x62 lê o serial.
+# 0x05 e 0x07–0x0F não existem (sem resposta). Não envie 0x51/0x52 por engano: alteram o serial.
 ACK = 0x42
 EVT_DONE = b"\x00\x01"
 

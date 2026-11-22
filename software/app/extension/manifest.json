@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "SIGNA — estado das IAs (experimental)",
+  "version": "0.1.0",
+  "description": "Observa ChatGPT, Claude e Grok na aba e informa o app SIGNA local. Heurística: depende do HTML dos sites.",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://claude.ai/*",
+    "https://grok.com/*",
+    "http://127.0.0.1:47623/*"
+  ],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*", "https://claude.ai/*", "https://grok.com/*"],
+      "js": ["sites.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_page": "options.html"
+}

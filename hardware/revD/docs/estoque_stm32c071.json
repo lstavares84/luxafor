@@ -1,0 +1,69 @@
+{
+  "consultado_em": "2026-11-22T10:51:00-03:00",
+  "zona": "America/Sao_Paulo",
+  "partes": {
+    "STM32C071G8U6": {
+      "package": "UFQFPN-28 4x4 GP (não usar sufixo N)",
+      "flash": "64 KB",
+      "lcsc": {
+        "codigo": "C44521811",
+        "estoque": 36,
+        "precos_usd": {
+          "1": 2.8329,
+          "10": 2.3855,
+          "30": 2.1049,
+          "100": 1.816,
+          "490": 1.6872,
+          "980": 1.6311
+        },
+        "fonte": "página LCSC C44521811, 2026-11-22, campo stockNumber e productPriceList",
+        "url": "https://www.lcsc.com/product-detail/C44521811.html",
+        "status": "verificado"
+      },
+      "jlc": {
+        "codigo": "C44521811",
+        "estoque": 109,
+        "biblioteca": "expand",
+        "precos_usd": {
+          "1-9": 2.8075,
+          "10-29": 2.3642,
+          "30-99": 2.086,
+          "100-489": 1.7997,
+          "490-979": 1.6721,
+          "980+": 1.6165
+        },
+        "fonte": "API JLCPCB selectSmtComponentList, 2026-11-22",
+        "status": "verificado"
+      },
+      "mouser": {
+        "estoque": 2781,
+        "preco_1_usd": 1.72,
+        "nota": "resultado de busca, página não aberta (403)",
+        "status": "não verificado na página"
+      },
+      "digikey": {
+        "estoque_imediato": 42,
+        "preco_1_usd": 1.85,
+        "nota": "resultado de busca (página de destaque STM32C0x1); fetch da ficha deu 403/Cloudflare",
+        "status": "não verificado na página"
+      }
+    },
+    "STM32C071GBU6": {
+      "package": "UFQFPN-28 4x4 GP, pinagem idêntica ao G8U6",
+      "flash": "128 KB",
+      "lcsc_jlc": {
+        "codigo": "C42113261",
+        "estoque_jlc": 0,
+        "nota": "listado na JLC, estoque 0 em 2026-11-22",
+        "status": "verificado (estoque)"
+      },
+      "mouser": {
+        "estoque": 4693,
+        "preco_a_partir_usd": 2.37,
+        "nota": "resultado de busca na série STM32C0; página não aberta",
+        "status": "não verificado na página"
+      },
+      "aviso_N": "STM32C071G8U6N / GBU6N NÃO são drop-in: pin 17 é VDDIO2 em vez de PC6 (DS14693, figura 5, versão N)."
+    }
+  }
+}

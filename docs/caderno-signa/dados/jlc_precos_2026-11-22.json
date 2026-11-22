@@ -1,0 +1,450 @@
+{
+ "date": "2026-11-22",
+ "source": "JLCPCB parts API selectSmtComponentList (componentPrices, USD)",
+ "parts": {
+  "C19702": {
+   "model": "CL10A106KP8NNNC",
+   "stock": 9889395,
+   "lib": "base",
+   "prices": [
+    {
+     "startNumber": 1,
+     "endNumber": 199,
+     "productPrice": 0.0167
+    },
+    {
+     "startNumber": 200,
+     "endNumber": 599,
+     "productPrice": 0.0133
+    },
+    {
+     "startNumber": 600,
+     "endNumber": 3999,
+     "productPrice": 0.0118
+    },
+    {
+     "startNumber": 4000,
+     "endNumber": 7999,
+     "productPrice": 0.0106
+    },
+    {
+     "startNumber": 8000,
+     "endNumber": 19999,
+     "productPrice": 0.0102
+    },
+    {
+     "startNumber": 20000,
+     "endNumber": -1,
+     "productPrice": 0.0099
+    }
+   ]
+  },
+  "C52923": {
+   "model": "CL05A105KA5NQNC",
+   "stock": 9143328,
+   "lib": "base",
+   "prices": [
+    {
+     "startNumber": 1,
+     "endNumber": 999,
+     "productPrice": 0.0055
+    },
+    {
+     "startNumber": 1000,
+     "endNumber": 2999,
+     "productPrice": 0.0042
+    },
+    {
+     "startNumber": 3000,
+     "endNumber": 9999,
+     "productPrice": 0.0035
+    },
+    {
+     "startNumber": 10000,
+     "endNumber": 49999,
+     "productPrice": 0.0031
+    },
+    {
+     "startNumber": 50000,
+     "endNumber": 99999,
+     "productPrice": 0.0029
+    },
+    {
+     "startNumber": 100000,
+     "endNumber": -1,
+     "productPrice": 0.0028
+    }
+   ]
+  },
+  "C1525": {
+   "model": "CL05B104KO5NNNC",
+   "stock": 33255992,
+   "lib": "base",
+   "prices": [
+    {
+     "startNumber": 1,
+     "endNumber": 999,
+     "productPrice": 0.0025
+    },
+    {
+     "startNumber": 1000,
+     "endNumber": 2999,
+     "productPrice": 0.0018
+    },
+    {
+     "startNumber": 3000,
+     "endNumber": 9999,
+     "productPrice": 0.0015
+    },
+    {
+     "startNumber": 10000,
+     "endNumber": 49999,
+     "productPrice": 0.0013
+    },
+    {
+     "startNumber": 50000,
+     "endNumber": 50199,
+     "productPrice": 0.0012
+    },
+    {
+     "startNumber": 50200,
+     "endNumber": -1,
+     "productPrice": 0.0012
+    }
+   ]
+  },
+  "C4154877": {
+   "model": "WS2816B-2020",
+   "stock": 2818,
+   "lib": "expand",
+   "prices": [
+    {
+     "startNumber": 1,
+     "endNumber": 49,
+     "productPrice": 0.1052
+    },
+    {
+     "startNumber": 50,
+     "endNumber": 149,
+     "productPrice": 0.0845
+    },
+    {
+     "startNumber": 150,
+     "endNumber": 499,
+     "productPrice": 0.074
+    },
+    {
+     "startNumber": 500,
+     "endNumber": 2499,
+     "productPrice": 0.0661
+    },
+    {
+     "startNumber": 2500,
+     "endNumber": 4499,
+     "productPrice": 0.0573
+    },
+    {
+     "startNumber": 4500,
+     "endNumber": -1,
+     "productPrice": 0.0542
+    }
+   ]
+  },
+  "C165948": {
+   "model": "TYPE-C-31-M-12",
+   "stock": 479061,
+   "lib": "expand",
+   "prices": [
+    {
+     "startNumber": 1,
+     "endNumber": 49,
+     "productPrice": 0.1869
+    },
+    {
+     "startNumber": 50,
+     "endNumber": 149,
+     "productPrice": 0.1476
+    },
+    {
+     "startNumber": 150,
+     "endNumber": 999,
+     "productPrice": 0.1283
+    },
+    {
+     "startNumber": 1000,
+     "endNumber": 1999,
+     "productPrice": 0.1041
+    },
+    {
+     "startNumber": 2000,
+     "endNumber": 4999,
+     "productPrice": 0.0994
+    },
+    {
+     "startNumber": 5000,
+     "endNumber": -1,
+     "productPrice": 0.0966
+    }
+   ]
+  },
+  "C25905": {
+   "model": "0402WGF5101TCE",
+   "stock": 3991027,
+   "lib": "base",
+   "prices": [
+    {
+     "startNumber": 1,
+     "endNumber": 999,
+     "productPrice": 0.0014
+    },
+    {
+     "startNumber": 1000,
+     "endNumber": 2999,
+     "productPrice": 0.0011
+    },
+    {
+     "startNumber": 3000,
+     "endNumber": 9999,
+     "productPrice": 0.0009
+    },
+    {
+     "startNumber": 10000,
+     "endNumber": 49999,
+     "productPrice": 0.0008
+    },
+    {
+     "startNumber": 50000,
+     "endNumber": 50199,
+     "productPrice": 0.0008
+    },
+    {
+     "startNumber": 50200,
+     "endNumber": -1,
+     "productPrice": 0.0008
+    }
+   ]
+  },
+  "C25105": {
+   "model": "0402WGF330JTCE",
+   "stock": 4451532,
+   "lib": "base",
+   "prices": [
+    {
+     "startNumber": 1,
+     "endNumber": 999,
+     "productPrice": 0.001
+    },
+    {
+     "startNumber": 1000,
+     "endNumber": 2999,
+     "productPrice": 0.0008
+    },
+    {
+     "startNumber": 3000,
+     "endNumber": 9999,
+     "productPrice": 0.0007
+    },
+    {
+     "startNumber": 10000,
+     "endNumber": 49999,
+     "productPrice": 0.0006
+    },
+    {
+     "startNumber": 50000,
+     "endNumber": 50199,
+     "productPrice": 0.0005
+    },
+    {
+     "startNumber": 50200,
+     "endNumber": -1,
+     "productPrice": 0.0005
+    }
+   ]
+  },
+  "C11702": {
+   "model": "0402WGF1001TCE",
+   "stock": 29439068,
+   "lib": "base",
+   "prices": [
+    {
+     "startNumber": 1,
+     "endNumber": 999,
+     "productPrice": 0.0011
+    },
+    {
+     "startNumber": 1000,
+     "endNumber": 2999,
+     "productPrice": 0.0009
+    },
+    {
+     "startNumber": 3000,
+     "endNumber": 9999,
+     "productPrice": 0.0008
+    },
+    {
+     "startNumber": 10000,
+     "endNumber": 49999,
+     "productPrice": 0.0007
+    },
+    {
+     "startNumber": 50000,
+     "endNumber": 50199,
+     "productPrice": 0.0006
+    },
+    {
+     "startNumber": 50200,
+     "endNumber": -1,
+     "productPrice": 0.0006
+    }
+   ]
+  },
+  "C44521811": {
+   "model": "STM32C071G8U6",
+   "stock": 109,
+   "lib": "expand",
+   "prices": [
+    {
+     "startNumber": 1,
+     "endNumber": 9,
+     "productPrice": 2.8075
+    },
+    {
+     "startNumber": 10,
+     "endNumber": 29,
+     "productPrice": 2.3642
+    },
+    {
+     "startNumber": 30,
+     "endNumber": 99,
+     "productPrice": 2.086
+    },
+    {
+     "startNumber": 100,
+     "endNumber": 489,
+     "productPrice": 1.7997
+    },
+    {
+     "startNumber": 490,
+     "endNumber": 979,
+     "productPrice": 1.6721
+    },
+    {
+     "startNumber": 980,
+     "endNumber": -1,
+     "productPrice": 1.6165
+    }
+   ]
+  },
+  "C51118": {
+   "model": "AP2112K-3.3TRG1",
+   "stock": 18947,
+   "lib": "expand",
+   "prices": [
+    {
+     "startNumber": 1,
+     "endNumber": 49,
+     "productPrice": 0.1667
+    },
+    {
+     "startNumber": 50,
+     "endNumber": 149,
+     "productPrice": 0.1288
+    },
+    {
+     "startNumber": 150,
+     "endNumber": 499,
+     "productPrice": 0.1102
+    },
+    {
+     "startNumber": 500,
+     "endNumber": 2999,
+     "productPrice": 0.0936
+    },
+    {
+     "startNumber": 3000,
+     "endNumber": 5999,
+     "productPrice": 0.0843
+    },
+    {
+     "startNumber": 6000,
+     "endNumber": -1,
+     "productPrice": 0.0817
+    }
+   ]
+  },
+  "C7484": {
+   "model": "SN74AHCT1G125DBVR",
+   "stock": 37435,
+   "lib": "expand",
+   "prices": [
+    {
+     "startNumber": 1,
+     "endNumber": 49,
+     "productPrice": 0.1098
+    },
+    {
+     "startNumber": 50,
+     "endNumber": 149,
+     "productPrice": 0.0889
+    },
+    {
+     "startNumber": 150,
+     "endNumber": 499,
+     "productPrice": 0.0786
+    },
+    {
+     "startNumber": 500,
+     "endNumber": 2999,
+     "productPrice": 0.0707
+    },
+    {
+     "startNumber": 3000,
+     "endNumber": 5999,
+     "productPrice": 0.0604
+    },
+    {
+     "startNumber": 6000,
+     "endNumber": -1,
+     "productPrice": 0.0573
+    }
+   ]
+  },
+  "C7519": {
+   "model": "USBLC6-2SC6",
+   "stock": 40264,
+   "lib": "expand",
+   "prices": [
+    {
+     "startNumber": 1,
+     "endNumber": 49,
+     "productPrice": 0.1551
+    },
+    {
+     "startNumber": 50,
+     "endNumber": 149,
+     "productPrice": 0.1183
+    },
+    {
+     "startNumber": 150,
+     "endNumber": 499,
+     "productPrice": 0.1003
+    },
+    {
+     "startNumber": 500,
+     "endNumber": 2999,
+     "productPrice": 0.0843
+    },
+    {
+     "startNumber": 3000,
+     "endNumber": 5999,
+     "productPrice": 0.0799
+    },
+    {
+     "startNumber": 6000,
+     "endNumber": -1,
+     "productPrice": 0.0771
+    }
+   ]
+  }
+ }
+}

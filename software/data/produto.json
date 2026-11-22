@@ -1,0 +1,213 @@
+{
+ "nome": "SIGNA",
+ "nome_nota": "nome provisório · a verificar no INPI",
+ "revisao": "rev C",
+ "data": "2026-11-22",
+ "categoria": "eletrônico de mesa · luz de presença para sala e monitor de IAs",
+ "frase": "uma luz para a sala ver seu status — e para você acompanhar suas IAs",
+ "fenomeno": "METROLOGIA LUMINOSA",
+ "problema": "quem entra na sala não sabe se você está livre, prestes a entrar em reunião ou ocupado; e quem usa Claude, ChatGPT e Grok perde o fio de quando precisam de atenção, erram ou batem o limite",
+ "usuario": "profissional em escritório ou home office que usa Google/Outlook Agenda e trabalha com IAs (Claude, ChatGPT, Grok)",
+ "funcionamento": [
+  "app no PC lê Google/Outlook Agenda, chamada/atalho e (opcional) Claude, ChatGPT e Grok",
+  "motor de prioridade decide os 3 LEDs (modo sala ou modo misto sala + IA)",
+  "envia relatório HID de 8 bytes pelo USB (0xFF todos, ou 0x01–0x03 por LED)",
+  "MCU expande 8 → 16 bit com gama; 3 LEDs RGB acendem o difusor sem cintilação"
+ ],
+ "diferencial": [
+  "modo SALA (padrão): livre, prestes a entrar em reunião (Google/Outlook) e ocupado",
+  "modo IA (opt-in): acompanha Claude, ChatGPT e Grok — inclusive limite de 5 h ou semanal",
+  "3 LEDs independentes (topo+meio = sala, baixo = IA), USB-C HID sem driver, PWM 10 kHz"
+ ],
+ "compatibilidade": "aceita o protocolo HID de 8 bytes da luz de status Luxafor Flag (decodificado em 2026-11), estendido por estados e endereçamento por LED",
+ "alocacao_leds": {
+  "sala_exclusivo": "0xFF (3 LEDs) = estado da sala",
+  "ia_exclusivo": "0xFF (3 LEDs) = estado da IA",
+  "misto": "LED 3 (topo) + LED 2 (meio) = SALA · LED 1 (baixo) = IA · quando SALA = OCUPADO, a sala vence e trava 0xFF em vermelho #FF3B2F (v1: LED 1 da IA some; não configurável)"
+ },
+ "modo_principal": "sala_ocupado",
+ "modo_alerta": "sala_prestes",
+ "modos": [
+  {
+   "id": "sala_livre",
+   "grupo": "sala",
+   "nome": "LIVRE",
+   "hex": "#2FD28A",
+   "sinal": "contínuo · brilho 0,28",
+   "significado": "pode interromper",
+   "onda": "const",
+   "nivel": 0.28,
+   "brilho_render": 0.28,
+   "leds": "0xFF (ou 0x02+0x03 misto)",
+   "prioridade": 7
+  },
+  {
+   "id": "sala_prestes",
+   "grupo": "sala",
+   "nome": "PRESTES A ENTRAR",
+   "hex": "#FF8A1A",
+   "sinal": "pulso lento 3,0 s · aviso 5 min (app)",
+   "significado": "reunião em N min (padrão 5 min, configurável no app)",
+   "onda": "breath",
+   "periodo_s": 3.0,
+   "piso": 0.2,
+   "expoente": 1.4,
+   "brilho_render": 0.9,
+   "leds": "0xFF (ou 0x02+0x03 misto)",
+   "prioridade": 2,
+   "aviso_min_padrao": 5
+  },
+  {
+   "id": "sala_ocupado",
+   "grupo": "sala",
+   "nome": "OCUPADO",
+   "hex": "#FF3B2F",
+   "sinal": "contínuo · brilho 1,0",
+   "significado": "em reunião ou foco · vence sobre a IA e trava 0xFF (v1, não configurável)",
+   "onda": "const",
+   "nivel": 1.0,
+   "brilho_render": 1.0,
+   "leds": "0xFF (trava os 3 LEDs; LED 1 da IA some no v1)",
+   "prioridade": 1
+  },
+  {
+   "id": "ia_livre",
+   "grupo": "ia",
+   "nome": "IA DESOCUPADA",
+   "hex": "#7C8EA6",
+   "sinal": "tênue · brilho 0,08",
+   "significado": "Claude/ChatGPT/Grok ociosos",
+   "onda": "const",
+   "nivel": 0.08,
+   "brilho_render": 0.12,
+   "leds": "0xFF (só IA) ou 0x01 (misto)",
+   "prioridade": 8
+  },
+  {
+   "id": "ia_processando",
+   "grupo": "ia",
+   "nome": "PROCESSANDO",
+   "hex": "#3D8BFF",
+   "sinal": "respiração 2,4 s · 0,42 Hz",
+   "significado": "IA gerando ou executando tarefa",
+   "onda": "breath",
+   "periodo_s": 2.4,
+   "piso": 0.15,
+   "expoente": 1.6,
+   "brilho_render": 0.8,
+   "leds": "0xFF (só IA) ou 0x01 (misto)",
+   "prioridade": 5
+  },
+  {
+   "id": "ia_atencao",
+   "grupo": "ia",
+   "nome": "PRECISA DE ATENÇÃO",
+   "hex": "#FFE02E",
+   "sinal": "quadrada 1 Hz · 50 %",
+   "significado": "IA aguarda resposta ou aprovação",
+   "onda": "square",
+   "freq_hz": 1.0,
+   "duty": 0.5,
+   "piso": 0.06,
+   "brilho_render": 1.0,
+   "leds": "0xFF (só IA) ou 0x01 (misto)",
+   "prioridade": 4
+  },
+  {
+   "id": "ia_erro",
+   "grupo": "ia",
+   "nome": "ERRO",
+   "hex": "#FF3FC8",
+   "sinal": "strobe 2,5 Hz · pulso 130 ms",
+   "significado": "falha de execução ou API",
+   "onda": "flash",
+   "freq_hz": 2.5,
+   "periodo_s": 0.4,
+   "pulso_s": 0.13,
+   "piso": 0.04,
+   "brilho_render": 1.0,
+   "nota_wcag": "2,5 Hz · abaixo do limite WCAG de 3 Hz",
+   "leds": "0xFF (só IA) ou 0x01 (misto)",
+   "prioridade": 3
+  },
+  {
+   "id": "ia_limite",
+   "grupo": "ia",
+   "nome": "LIMITE ATINGIDO",
+   "hex": "#9B5CFF",
+   "sinal": "5 h: pulso duplo · sem.: fixo baixo",
+   "significado": "cota vencida (5 h vs semanal)",
+   "onda": "double_pulse",
+   "periodo_s": 3.0,
+   "pulso_s": 0.25,
+   "gap_s": 0.25,
+   "pico": 0.55,
+   "piso": 0.06,
+   "semanal_nivel": 0.28,
+   "brilho_render": 0.65,
+   "nota_sub": "sólida: 5 h (pulso duplo) · tracejada: semanal (0,28)",
+   "leds": "0xFF (só IA) ou 0x01 (misto)",
+   "prioridade": 6
+  }
+ ],
+ "prioridade_ordem": [
+  "sala_ocupado",
+  "sala_prestes",
+  "ia_erro",
+  "ia_atencao",
+  "ia_processando",
+  "ia_limite",
+  "sala_livre",
+  "ia_livre"
+ ],
+ "envelope": {
+  "diametro_tampa_mm": 19.0,
+  "diametro_tubo_mm": 16.0,
+  "comprimento_mm": 78.0,
+  "massa_g": 20,
+  "massa_origem": "estimativa: volumes do CAD × densidade (Al 2,70; PC 1,20; TPE 1,10; FR-4 1,85), sem cabo"
+ },
+ "placa": {
+  "largura_mm": 11.0,
+  "comprimento_mm": 44.0,
+  "espessura_mm": 0.8,
+  "camadas": 2,
+  "usb_saliencia_mm": 0.68,
+  "altura_usb_mm": 3.3,
+  "led_centros_mm": [
+   3.0,
+   10.0,
+   17.0
+  ],
+  "led_passo_mm": 7.0
+ },
+ "especificacoes_capa": [
+  [
+   "ENVELOPE",
+   "Ø19 × 78 mm"
+  ],
+  [
+   "MASSA",
+   "≈ 20 g (est.)"
+  ],
+  [
+   "LUZ",
+   "3 × RGB 16 bit · PWM 10 kHz"
+  ],
+  [
+   "MODOS",
+   "SALA (agenda) + IA (opt-in)"
+  ],
+  [
+   "INTERFACE",
+   "USB-C · HID · sem driver"
+  ],
+  [
+   "CONSUMO",
+   "≤ 0,5 W a 5 V (datasheet)"
+  ]
+ ],
+ "aviso_prestes_min_padrao": 5,
+ "aviso_prestes_configuravel": true,
+ "ocupado_trava_0xff_v1": true
+}

@@ -1,0 +1,42 @@
+{
+ "interferencias": {
+  "tampaoxberco": 1.4017,
+  "passa_caboxcabo": 27.6086,
+  "sobremoldexalivio": 13.2775,
+  "alivioxcabo": 15.3106
+ },
+ "folgas": {
+  "placa (PCB) – berço": 0.0,
+  "orelhas da placa – ressalto da tampa (axial)": 0.25,
+  "borda de baixo da placa – fundo das ranhuras": 0.3,
+  "orelhas – fundo lateral da fenda (por lado)": 0.15,
+  "orelhas – tampa (mín. 3D)": 0.155,
+  "orelhas – tubo (mín. 3D)": 0.499,
+  "placa na ranhura: folga por face (espessura)": 0.05,
+  "placa na ranhura: folga lateral total": 0.3,
+  "placa (com componentes) – tubo": 0.499,
+  "placa (com componentes) – tampão": 2.05,
+  "LED (topo) – difusor, frente": 7.265,
+  "corpo do botão S1 – tubo": 3.683,
+  "botão P06 – haste do S1 (axial, nominal)": 0.4,
+  "botão P06 – tampão (radial no furo)": 0.1,
+  "colar P06 – parede do rebaixo (radial)": 0.2,
+  "botão P06 – berço": 0.695,
+  "botão P06 – placa": 0.941,
+  "curso total até acionar (pior caso)": 1.0,
+  "casca do plugue – cavidade do receptáculo (lateral)": 0.045,
+  "casca do plugue – cavidade do receptáculo (altura)": 0.08,
+  "casca do plugue – carcaça J1 (mín. 3D)": 0.045,
+  "língua J1 – interior do plugue (mín. 3D)": 0.091,
+  "ponta da casca – fundo da cavidade (axial)": 0.4,
+  "sobremolde – flange do berço": 0.85,
+  "espaço p/ sobremolde + alívio (boca → topo do alívio do passa-cabo)": 25.6,
+  "sobremolde – boca do receptáculo (axial)": 0.45,
+  "sobremolde – tampa (cavidade Ø13.6)": 0.969,
+  "sobremolde – passa-cabo": 3.65,
+  "alívio do plugue – passa-cabo": 0.663,
+  "cabo – tampa (furo do topo)": 4.47,
+  "casca do plugue – placa (PCB)": 0.52,
+  "sobremolde passa no furo Ø12.8 (diagonal 11.65)": 0.573
+ }
+}
