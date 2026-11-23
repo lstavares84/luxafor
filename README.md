@@ -35,7 +35,8 @@ A tabela completa, com curvas e alocação dos LEDs, está em [`software/data/pr
 | [`mecanica/`](mecanica/) | Corpo plástico, berço, tampa, botão, cabo e o conjunto integrado |
 | [`software/`](software/) | Firmware (STM32C071 + TinyUSB) e app de desktop (calendário, hooks, extensão) |
 | [`docs/caderno-signa/`](docs/caderno-signa/) | Caderno conceitual SIGNA (14 lâminas A3) e os scripts que o geram |
-| [`docs/prompts/`](docs/prompts/) | Prompts para cadernos conceituais (ainda úteis) |
+| [`docs/caderno-engenharia/`](docs/caderno-engenharia/) | Caderno de engenharia SIGNA (141 lâminas A3), em [três partes](docs/caderno-engenharia/README.md), e o gerador |
+| [`docs/prompts/`](docs/prompts/) | Prompts para cadernos: [conceitual](docs/prompts/prompt-caderno-conceitual.md), [conceitual genérico](docs/prompts/prompt-caderno-generico.md) e [engenharia](docs/prompts/prompt-caderno-engenharia.md) |
 | [`docs/FUNCIONAMENTO.md`](docs/FUNCIONAMENTO.md) | Relatório da engenharia reversa do Luxafor Flag |
 | [`PROTOCOLO.md`](PROTOCOLO.md) | Protocolo HID de 8 bytes (o SIGNA é compatível e o estende) |
 | [`luxafor.py`](luxafor.py), [`tools/anim.py`](tools/anim.py) | CLI e ferramenta de medição do Flag original |
