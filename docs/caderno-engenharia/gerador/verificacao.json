@@ -1,0 +1,572 @@
+{
+  "paginas": 141,
+  "arquivo": "/workspace/caderno-engenharia/signa-engenharia.pdf",
+  "problemas": [],
+  "glifos_faltando": [],
+  "sumario": [
+    [
+      "Capa",
+      1
+    ],
+    [
+      "Controle do documento",
+      2
+    ],
+    [
+      "Controle do documento (cont.)",
+      3
+    ],
+    [
+      "Sumário 1",
+      4
+    ],
+    [
+      "Sumário 2",
+      5
+    ],
+    [
+      "Sumário 3",
+      6
+    ],
+    [
+      "Sumário 4",
+      7
+    ],
+    [
+      "Sumário 5",
+      8
+    ],
+    [
+      "I  SISTEMA",
+      9
+    ],
+    [
+      "Visão geral do sistema",
+      10
+    ],
+    [
+      "Visão geral do sistema (cont.)",
+      11
+    ],
+    [
+      "Diagrama de blocos",
+      12
+    ],
+    [
+      "Diagrama de blocos (cont.)",
+      13
+    ],
+    [
+      "Requisitos e especificações",
+      14
+    ],
+    [
+      "Requisitos e especificações (cont.)",
+      15
+    ],
+    [
+      "Requisitos  ·  mecânica e USB",
+      16
+    ],
+    [
+      "Requisitos  ·  mecânica e USB (cont.)",
+      17
+    ],
+    [
+      "Estados da sala",
+      18
+    ],
+    [
+      "Estados da sala (cont.)",
+      19
+    ],
+    [
+      "Estados da IA e modo misto",
+      20
+    ],
+    [
+      "Estados da IA e modo misto (cont.)",
+      21
+    ],
+    [
+      "Escada de prioridade e modos",
+      22
+    ],
+    [
+      "Escada de prioridade e modos (cont.)",
+      23
+    ],
+    [
+      "Identidade e nomenclatura",
+      24
+    ],
+    [
+      "Identidade e nomenclatura (cont.)",
+      25
+    ],
+    [
+      "II  ELETRÔNICA",
+      26
+    ],
+    [
+      "Placa rev D  ·  o que mudou",
+      27
+    ],
+    [
+      "Placa rev D  ·  o que mudou (cont.)",
+      28
+    ],
+    [
+      "Esquemático",
+      29
+    ],
+    [
+      "Pinagem do MCU",
+      30
+    ],
+    [
+      "Pinagem do MCU (cont.)",
+      31
+    ],
+    [
+      "Pinagem do MCU (cont.)",
+      32
+    ],
+    [
+      "Redes e componentes",
+      33
+    ],
+    [
+      "Redes e componentes (cont.)",
+      34
+    ],
+    [
+      "Alimentação e corrente",
+      35
+    ],
+    [
+      "Alimentação e corrente (cont.)",
+      36
+    ],
+    [
+      "Cadeia de LEDs e temporização",
+      37
+    ],
+    [
+      "Cadeia de LEDs e temporização (cont.)",
+      38
+    ],
+    [
+      "USB, ESD e proteção",
+      39
+    ],
+    [
+      "Botão, BOOT0 e pontos de teste",
+      40
+    ],
+    [
+      "BOM eletrônica e estoque JLC",
+      41
+    ],
+    [
+      "BOM eletrônica e estoque JLC (cont.)",
+      42
+    ],
+    [
+      "Layout, stackup e regras",
+      43
+    ],
+    [
+      "Layout, stackup e regras (cont.)",
+      44
+    ],
+    [
+      "Vista anotada  ·  face de cima",
+      45
+    ],
+    [
+      "Vista anotada  ·  face de baixo",
+      46
+    ],
+    [
+      "Close-ups e cobre",
+      47
+    ],
+    [
+      "Close-ups e cobre (cont.)",
+      48
+    ],
+    [
+      "ERC e DRC",
+      49
+    ],
+    [
+      "Fabricação e parâmetros JLC",
+      50
+    ],
+    [
+      "Fabricação e parâmetros JLC (cont.)",
+      51
+    ],
+    [
+      "Painelização e pendências",
+      52
+    ],
+    [
+      "Painelização e pendências (cont.)",
+      53
+    ],
+    [
+      "III  MECÂNICA",
+      54
+    ],
+    [
+      "Visão da mecânica rev B",
+      55
+    ],
+    [
+      "Isometria e corte",
+      56
+    ],
+    [
+      "Vista explodida",
+      57
+    ],
+    [
+      "Desenho de conjunto A00",
+      58
+    ],
+    [
+      "Folgas e interferências",
+      59
+    ],
+    [
+      "Folgas e interferências (cont.)",
+      60
+    ],
+    [
+      "Folgas  ·  botão e USB-C",
+      61
+    ],
+    [
+      "Folgas  ·  botão e USB-C (cont.)",
+      62
+    ],
+    [
+      "P01  ·  tubo difusor",
+      63
+    ],
+    [
+      "P02  ·  tampa de alumínio",
+      64
+    ],
+    [
+      "P03  ·  berço",
+      65
+    ],
+    [
+      "P04  ·  tampão",
+      66
+    ],
+    [
+      "P05  ·  passa-cabo",
+      67
+    ],
+    [
+      "P06  ·  botão",
+      68
+    ],
+    [
+      "Cabo C01  ·  especificação",
+      69
+    ],
+    [
+      "Cabo C01  ·  especificação (cont.)",
+      70
+    ],
+    [
+      "Materiais e acabamentos",
+      71
+    ],
+    [
+      "Massas e envelope",
+      72
+    ],
+    [
+      "Massas e envelope (cont.)",
+      73
+    ],
+    [
+      "Montagem  ·  preparação",
+      74
+    ],
+    [
+      "Montagem  ·  passos 1 a 3",
+      75
+    ],
+    [
+      "Montagem  ·  passos 1 a 3 (cont.)",
+      76
+    ],
+    [
+      "Montagem  ·  passos 4 a 6",
+      77
+    ],
+    [
+      "Montagem  ·  passos 4 a 6 (cont.)",
+      78
+    ],
+    [
+      "Desmontagem e assistência",
+      79
+    ],
+    [
+      "Manufatura  ·  protótipo e série",
+      80
+    ],
+    [
+      "IV  FIRMWARE",
+      81
+    ],
+    [
+      "Arquitetura do firmware",
+      82
+    ],
+    [
+      "Arquitetura do firmware (cont.)",
+      83
+    ],
+    [
+      "Laço principal e relógios",
+      84
+    ],
+    [
+      "Laço principal e relógios (cont.)",
+      85
+    ],
+    [
+      "Descritores USB",
+      86
+    ],
+    [
+      "Protocolo HID  ·  opcodes compatíveis",
+      87
+    ],
+    [
+      "Protocolo HID  ·  opcodes compatíveis (cont.)",
+      88
+    ],
+    [
+      "Protocolo HID  ·  endereços, tempos, padrões",
+      89
+    ],
+    [
+      "Protocolo HID  ·  endereços, tempos, padrões (cont.)",
+      90
+    ],
+    [
+      "Protocolo HID  ·  opcodes nativos SIGNA",
+      91
+    ],
+    [
+      "Protocolo HID  ·  opcodes nativos SIGNA (cont.)",
+      92
+    ],
+    [
+      "NVM e número de série",
+      93
+    ],
+    [
+      "DFU, option bytes e botão",
+      94
+    ],
+    [
+      "Driver WS2816 e gamma",
+      95
+    ],
+    [
+      "Compilação e gravação",
+      96
+    ],
+    [
+      "Compilação e gravação (cont.)",
+      97
+    ],
+    [
+      "Testes de host e lacunas no silício",
+      98
+    ],
+    [
+      "V  APLICATIVO",
+      99
+    ],
+    [
+      "Arquitetura do aplicativo",
+      100
+    ],
+    [
+      "Arquitetura do aplicativo (cont.)",
+      101
+    ],
+    [
+      "Calendários Google e Outlook",
+      102
+    ],
+    [
+      "Hooks de IA e extensão",
+      103
+    ],
+    [
+      "Hooks de IA e extensão (cont.)",
+      104
+    ],
+    [
+      "Configuração e instalação",
+      105
+    ],
+    [
+      "Configuração e instalação (cont.)",
+      106
+    ],
+    [
+      "Operação do aplicativo",
+      107
+    ],
+    [
+      "Compatibilidade com o Flag e segurança",
+      108
+    ],
+    [
+      "VI  OPERAÇÃO E TESTE",
+      109
+    ],
+    [
+      "Manual de operação  ·  instalação",
+      110
+    ],
+    [
+      "Manual de operação  ·  estados e botão",
+      111
+    ],
+    [
+      "Solução de problemas",
+      112
+    ],
+    [
+      "Solução de problemas (cont.)",
+      113
+    ],
+    [
+      "Teste de produção  ·  elétrico",
+      114
+    ],
+    [
+      "Teste de produção  ·  elétrico (cont.)",
+      115
+    ],
+    [
+      "Teste de produção  ·  óptico, mecânico, registro",
+      116
+    ],
+    [
+      "Teste de produção  ·  óptico, mecânico, registro (cont.)",
+      117
+    ],
+    [
+      "VII  CONFORMIDADE, CUSTO E RISCOS",
+      118
+    ],
+    [
+      "Considerações de conformidade",
+      119
+    ],
+    [
+      "Considerações de conformidade (cont.)",
+      120
+    ],
+    [
+      "Custo do produto",
+      121
+    ],
+    [
+      "Custo do produto (cont.)",
+      122
+    ],
+    [
+      "Riscos e decisões em aberto",
+      123
+    ],
+    [
+      "Riscos e decisões em aberto (cont.)",
+      124
+    ],
+    [
+      "Itens a definir",
+      125
+    ],
+    [
+      "Itens a definir (cont.)",
+      126
+    ],
+    [
+      "Itens a definir (cont.)",
+      127
+    ],
+    [
+      "Fontes e referências",
+      128
+    ],
+    [
+      "VIII  APÊNDICES",
+      129
+    ],
+    [
+      "BOM completa  ·  eletrônica",
+      130
+    ],
+    [
+      "BOM completa  ·  eletrônica (cont.)",
+      131
+    ],
+    [
+      "BOM completa  ·  mecânica e resto",
+      132
+    ],
+    [
+      "BOM completa  ·  mecânica e resto (cont.)",
+      133
+    ],
+    [
+      "BOM completa  ·  mecânica e resto (cont.)",
+      134
+    ],
+    [
+      "Arquivo de posições (CPL)",
+      135
+    ],
+    [
+      "Arquivo de posições (CPL) (cont.)",
+      136
+    ],
+    [
+      "Relatórios ERC e DRC",
+      137
+    ],
+    [
+      "Glossário",
+      138
+    ],
+    [
+      "Glossário (cont.)",
+      139
+    ],
+    [
+      "Glossário (cont.)",
+      140
+    ],
+    [
+      "Colofão",
+      141
+    ]
+  ]
+}

@@ -29,3 +29,15 @@ state.json
 # Caderno antigo (agora em .old): versionar só os JPEGs das cenas
 docs/conceito/renders/*.png
 .old/docs/conceito/renders/*.png
+
+# Caderno de engenharia: o PDF único (~39 MB) é regenerado.
+# Só as 4 amostras de preview entram; o resto de lamina_*.png e __pycache__ ficam de fora.
+docs/caderno-engenharia/signa-engenharia.pdf
+docs/caderno-engenharia/**/signa-engenharia.pdf
+docs/caderno-engenharia/**/__pycache__/
+docs/caderno-engenharia/preview/lamina_*.png
+docs/caderno-engenharia/gerador/preview/lamina_*.png
+!docs/caderno-engenharia/preview/lamina_001.png
+!docs/caderno-engenharia/preview/lamina_004.png
+!docs/caderno-engenharia/preview/lamina_022.png
+!docs/caderno-engenharia/preview/lamina_082.png
